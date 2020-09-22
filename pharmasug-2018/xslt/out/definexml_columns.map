@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SXLEMAP name="define" version="2.1">
+<TABLE name="column_metadata">
+<TABLE-PATH syntax="XPath">/LIBRARY/ItemRefItemDef</TABLE-PATH>
+<COLUMN name="sasref">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/sasref</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>SASreferences sourcedata libref</DESCRIPTION>
+<LENGTH>8</LENGTH>
+</COLUMN>
+<COLUMN name="table">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/table</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Table Name</DESCRIPTION>
+<LENGTH>32</LENGTH>
+</COLUMN>
+<COLUMN name="column">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/column</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Column Name</DESCRIPTION>
+<LENGTH>32</LENGTH>
+</COLUMN>
+<COLUMN name="label">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/label</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Column Description</DESCRIPTION>
+<LENGTH>200</LENGTH>
+</COLUMN>
+<COLUMN name="order">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/order</PATH>
+<TYPE>numeric</TYPE>
+<DATATYPE>integer</DATATYPE>
+<DESCRIPTION>Column Order</DESCRIPTION>
+<LENGTH>8</LENGTH>
+</COLUMN>
+<COLUMN name="type">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/type</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Column Type</DESCRIPTION>
+<LENGTH>1</LENGTH>
+</COLUMN>
+<COLUMN name="length">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/length</PATH>
+<TYPE>numeric</TYPE>
+<DATATYPE>integer</DATATYPE>
+<DESCRIPTION>Column Length</DESCRIPTION>
+<LENGTH>8</LENGTH>
+</COLUMN>
+<COLUMN name="displayformat">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/displayformat</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Display Format</DESCRIPTION>
+<LENGTH>200</LENGTH>
+</COLUMN>
+<COLUMN name="significantdigits">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/significantdigits</PATH>
+<TYPE>numeric</TYPE>
+<DATATYPE>integer</DATATYPE>
+<DESCRIPTION>Significant Digits</DESCRIPTION>
+<LENGTH>8</LENGTH>
+</COLUMN>
+<COLUMN name="xmldatatype">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/xmldatatype</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>XML Data Type</DESCRIPTION>
+<LENGTH>18</LENGTH>
+</COLUMN>
+<COLUMN name="xmlcodelist">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/xmlcodelist</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>SAS Format/XML Codelist</DESCRIPTION>
+<LENGTH>128</LENGTH>
+</COLUMN>
+<COLUMN name="core">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/core</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Column Required or Optional</DESCRIPTION>
+<LENGTH>10</LENGTH>
+</COLUMN>
+<COLUMN name="origin">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/origin</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Column Origin</DESCRIPTION>
+<LENGTH>40</LENGTH>
+</COLUMN>
+<COLUMN name="origindescription">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/origindescription</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Column Origin Description</DESCRIPTION>
+<LENGTH>1000</LENGTH>
+</COLUMN>
+<COLUMN name="role">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/role</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Column Role</DESCRIPTION>
+<LENGTH>200</LENGTH>
+</COLUMN>
+<COLUMN name="algorithm">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/algorithm</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Computational Algorithm or Method</DESCRIPTION>
+<LENGTH>1000</LENGTH>
+</COLUMN>
+<COLUMN name="algorithmtype">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/algorithmtype</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Type of Algorithm</DESCRIPTION>
+<LENGTH>11</LENGTH>
+</COLUMN>
+<COLUMN name="formalexpression">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/formalexpression</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Formal Expression for Algorithm</DESCRIPTION>
+<LENGTH>1000</LENGTH>
+</COLUMN>
+<COLUMN name="formalexpressioncontext">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/formalexpressioncontext</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Context to be used when evaluating the FormalExpression content</DESCRIPTION>
+<LENGTH>1000</LENGTH>
+</COLUMN>
+<COLUMN name="comment">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/comment</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Comment</DESCRIPTION>
+<LENGTH>1000</LENGTH>
+</COLUMN>
+<COLUMN name="studyversion">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/studyversion</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Unique study version identifier</DESCRIPTION>
+<LENGTH>128</LENGTH>
+</COLUMN>
+<COLUMN name="standard">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/standard</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Name of Standard</DESCRIPTION>
+<LENGTH>20</LENGTH>
+</COLUMN>
+<COLUMN name="standardversion">
+<PATH syntax="XPath">/LIBRARY/ItemRefItemDef/standardversion</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Version of Standard</DESCRIPTION>
+<LENGTH>20</LENGTH>
+</COLUMN>
+</TABLE>
+</SXLEMAP>

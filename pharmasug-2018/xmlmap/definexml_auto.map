@@ -1,0 +1,1726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SXLEMAP name="AUTO_GEN" version="2.1">
+
+    <NAMESPACES count="4">
+        <NS id="1" prefix="">http://www.cdisc.org/ns/odm/v1.3</NS>
+        <NS id="2" prefix="xlink">http://www.w3.org/1999/xlink</NS>
+        <NS id="3" prefix="def">http://www.cdisc.org/ns/def/v2.0</NS>
+        <NS id="4" prefix="xml">http://www.w3.org/XML/1998/namespace</NS>
+    </NAMESPACES>
+
+    <!-- ############################################################ -->
+    <TABLE description="ODM" name="ODM">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="ODM_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="ODMVersion">
+            <PATH syntax="XPathENR">/{1}ODM/@ODMVersion</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>5</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="FileOID">
+            <PATH syntax="XPathENR">/{1}ODM/@FileOID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>43</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="FileType">
+            <PATH syntax="XPathENR">/{1}ODM/@FileType</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>8</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="CreationDateTime">
+            <PATH syntax="XPathENR">/{1}ODM/@CreationDateTime</PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>datetime</DATATYPE>
+            <FORMAT width="19">IS8601DT</FORMAT>
+            <INFORMAT width="19">IS8601DT</INFORMAT>
+        </COLUMN>
+
+        <COLUMN name="Originator">
+            <PATH syntax="XPathENR">/{1}ODM/@Originator</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>27</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="SourceSystem">
+            <PATH syntax="XPathENR">/{1}ODM/@SourceSystem</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>9</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="SourceSystemVersion">
+            <PATH syntax="XPathENR">/{1}ODM/@SourceSystemVersion</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>5</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="Study" name="Study">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="ODM_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="Study_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="OID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/@OID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>7</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="GlobalVariables" name="GlobalVariables">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}GlobalVariables</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="Study_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="GlobalVariables_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}GlobalVariables</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="StudyName">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}GlobalVariables/{1}StudyName</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>7</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="StudyDescription">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}GlobalVariables/{1}StudyDescription</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>16</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="ProtocolName">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}GlobalVariables/{1}ProtocolName</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>7</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="MetaDataVersion" name="MetaDataVersion">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="Study_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="MetaDataVersion_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="OID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/@OID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>33</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Name">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/@Name</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>31</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Description">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/@Description</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>31</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="DefineVersion">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/@{3}DefineVersion</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>5</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="StandardName">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/@{3}StandardName</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>7</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="StandardVersion">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/@{3}StandardVersion</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>5</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="AnnotatedCRF" name="AnnotatedCRF">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}AnnotatedCRF</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="MetaDataVersion_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="AnnotatedCRF_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}AnnotatedCRF</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="DocumentRef" name="DocumentRef">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}AnnotatedCRF/{3}DocumentRef</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="AnnotatedCRF_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}AnnotatedCRF</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="DocumentRef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}AnnotatedCRF/{3}DocumentRef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="leafID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}AnnotatedCRF/{3}DocumentRef/@leafID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>11</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="SupplementalDoc" name="SupplementalDoc">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}SupplementalDoc</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="MetaDataVersion_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="SupplementalDoc_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}SupplementalDoc</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="DocumentRef" name="DocumentRef1">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}SupplementalDoc/{3}DocumentRef</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="SupplementalDoc_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}SupplementalDoc</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="DocumentRef1_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}SupplementalDoc/{3}DocumentRef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="leafID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}SupplementalDoc/{3}DocumentRef/@leafID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="ValueListDef" name="ValueListDef">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}ValueListDef</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="MetaDataVersion_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="ValueListDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}ValueListDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="OID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}ValueListDef/@OID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>14</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="ItemRef" name="ItemRef">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}ValueListDef/{1}ItemRef</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="ValueListDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}ValueListDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="ItemRef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}ValueListDef/{1}ItemRef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="ItemOID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}ValueListDef/{1}ItemRef/@ItemOID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>66</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="OrderNumber">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}ValueListDef/{1}ItemRef/@OrderNumber</PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="Mandatory">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}ValueListDef/{1}ItemRef/@Mandatory</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>3</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="MethodOID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}ValueListDef/{1}ItemRef/@MethodOID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>10</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="WhereClauseRef" name="WhereClauseRef">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}ValueListDef/{1}ItemRef/{3}WhereClauseRef</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="ItemRef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}ValueListDef/{1}ItemRef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="WhereClauseRef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}ValueListDef/{1}ItemRef/{3}WhereClauseRef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="WhereClauseOID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}ValueListDef/{1}ItemRef/{3}WhereClauseRef/@WhereClauseOID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>67</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="WhereClauseDef" name="WhereClauseDef">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}WhereClauseDef</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="MetaDataVersion_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="WhereClauseDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}WhereClauseDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="OID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}WhereClauseDef/@OID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>67</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="CommentOID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}WhereClauseDef/@{3}CommentOID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>23</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="RangeCheck" name="RangeCheck">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}WhereClauseDef/{1}RangeCheck</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="WhereClauseDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}WhereClauseDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="RangeCheck_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}WhereClauseDef/{1}RangeCheck</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="SoftHard">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}WhereClauseDef/{1}RangeCheck/@SoftHard</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>4</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="ItemOID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}WhereClauseDef/{1}RangeCheck/@{3}ItemOID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>14</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Comparator">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}WhereClauseDef/{1}RangeCheck/@Comparator</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>2</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="CheckValue" name="CheckValue">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}WhereClauseDef/{1}RangeCheck/{1}CheckValue</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="RangeCheck_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}WhereClauseDef/{1}RangeCheck</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="CheckValue_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}WhereClauseDef/{1}RangeCheck/{1}CheckValue</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="CheckValue">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}WhereClauseDef/{1}RangeCheck/{1}CheckValue</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>10</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+ 
+  
+  <TABLE description="ItemGroupDef" name="ItemGroupDef">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="MetaDataVersion_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="ItemGroupDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="OID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/@OID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>11</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Domain">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/@Domain</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>8</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Name">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/@Name</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>8</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Repeating">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/@Repeating</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>3</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="IsReferenceData">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/@IsReferenceData</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>3</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="SASDatasetName">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/@SASDatasetName</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>8</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Purpose">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/@Purpose</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>10</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Structure">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/@{3}Structure</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>85</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Class">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/@{3}Class</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>15</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="ArchiveLocationID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/@{3}ArchiveLocationID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>11</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="CommentOID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/@{3}CommentOID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>13</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="Description" name="Description">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{1}Description</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="ItemGroupDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="Description_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{1}Description</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="TranslatedText" name="TranslatedText">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{1}Description/{1}TranslatedText</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="Description_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{1}Description</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="TranslatedText_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{1}Description/{1}TranslatedText</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="lang">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{1}Description/{1}TranslatedText/@{4}lang</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>2</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="TranslatedText">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{1}Description/{1}TranslatedText</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>36</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="ItemRef" name="ItemRef1">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{1}ItemRef</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="ItemGroupDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="ItemRef1_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{1}ItemRef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="ItemOID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{1}ItemRef/@ItemOID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>18</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="OrderNumber">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{1}ItemRef/@OrderNumber</PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="Mandatory">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{1}ItemRef/@Mandatory</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>3</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Role">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{1}ItemRef/@Role</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>17</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="KeySequence">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{1}ItemRef/@KeySequence</PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="MethodOID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{1}ItemRef/@MethodOID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>14</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="leaf" name="leaf">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{3}leaf</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="ItemGroupDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="leaf_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{3}leaf</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="ID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{3}leaf/@ID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>11</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="href">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{3}leaf/@{2}href</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>12</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="title">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{3}leaf/{3}title</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>12</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="Alias" name="Alias">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{1}Alias</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="ItemGroupDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="Alias_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{1}Alias</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="Context">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{1}Alias/@Context</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>17</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Name">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemGroupDef/{1}Alias/@Name</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>14</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="ItemDef" name="ItemDef">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="MetaDataVersion_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="ItemDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="OID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/@OID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>66</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Name">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/@Name</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>16</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="DataType">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/@DataType</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>8</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Length">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/@Length</PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="SASFieldName">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/@SASFieldName</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>8</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="CommentOID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/@{3}CommentOID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>23</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="SignificantDigits">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/@SignificantDigits</PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="DisplayFormat">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/@{3}DisplayFormat</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>5</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="Description" name="Description1">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{1}Description</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="ItemDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="Description1_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{1}Description</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="TranslatedText" name="TranslatedText1">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{1}Description/{1}TranslatedText</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="Description1_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{1}Description</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="TranslatedText1_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{1}Description/{1}TranslatedText</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="lang">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{1}Description/{1}TranslatedText/@{4}lang</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>2</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="TranslatedText1">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{1}Description/{1}TranslatedText</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>92</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="CodeListRef" name="CodeListRef">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{1}CodeListRef</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="ItemDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="CodeListRef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{1}CodeListRef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="CodeListOID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{1}CodeListRef/@CodeListOID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>13</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="Origin" name="Origin">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="ItemDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="Origin_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="Type">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin/@Type</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>8</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="Description" name="Description2">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin/{1}Description</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="Origin_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="Description2_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin/{1}Description</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="TranslatedText" name="TranslatedText2">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin/{1}Description/{1}TranslatedText</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="Description2_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin/{1}Description</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="TranslatedText2_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin/{1}Description/{1}TranslatedText</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="lang">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin/{1}Description/{1}TranslatedText/@{4}lang</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>2</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="TranslatedText2">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin/{1}Description/{1}TranslatedText</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>5</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="DocumentRef" name="DocumentRef2">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin/{3}DocumentRef</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="Origin_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="DocumentRef2_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin/{3}DocumentRef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="leafID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin/{3}DocumentRef/@leafID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>11</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="PDFPageRef" name="PDFPageRef">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin/{3}DocumentRef/{3}PDFPageRef</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="DocumentRef2_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin/{3}DocumentRef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="PDFPageRef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin/{3}DocumentRef/{3}PDFPageRef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="PageRefs">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin/{3}DocumentRef/{3}PDFPageRef/@PageRefs</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>8</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Type">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin/{3}DocumentRef/{3}PDFPageRef/@Type</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>11</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="FirstPage">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin/{3}DocumentRef/{3}PDFPageRef/@FirstPage</PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="LastPage">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}Origin/{3}DocumentRef/{3}PDFPageRef/@LastPage</PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="ValueListRef" name="ValueListRef">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}ValueListRef</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="ItemDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="ValueListRef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}ValueListRef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="ValueListOID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}ItemDef/{3}ValueListRef/@ValueListOID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>14</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="CodeList" name="CodeList">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="MetaDataVersion_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="CodeList_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="OID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/@OID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>13</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Name">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/@Name</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>43</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="DataType">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/@DataType</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>7</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="SASFormatName">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/@SASFormatName</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>8</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="EnumeratedItem" name="EnumeratedItem">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}EnumeratedItem</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="CodeList_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="EnumeratedItem_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}EnumeratedItem</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="CodedValue">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}EnumeratedItem/@CodedValue</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>92</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="OrderNumber">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}EnumeratedItem/@OrderNumber</PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="ExtendedValue">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}EnumeratedItem/@{3}ExtendedValue</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>3</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Rank">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}EnumeratedItem/@Rank</PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="Alias" name="Alias1">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}EnumeratedItem/{1}Alias</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="EnumeratedItem_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}EnumeratedItem</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="Alias1_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}EnumeratedItem/{1}Alias</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="Name">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}EnumeratedItem/{1}Alias/@Name</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>6</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Context">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}EnumeratedItem/{1}Alias/@Context</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>13</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="Alias" name="Alias2">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}Alias</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="CodeList_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="Alias2_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}Alias</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="Name">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}Alias/@Name</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>7</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Context">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}Alias/@Context</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>13</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="CodeListItem" name="CodeListItem">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}CodeListItem</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="CodeList_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="CodeListItem_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}CodeListItem</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="CodedValue">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}CodeListItem/@CodedValue</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>18</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Rank">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}CodeListItem/@Rank</PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="OrderNumber">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}CodeListItem/@OrderNumber</PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="ExtendedValue">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}CodeListItem/@{3}ExtendedValue</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>3</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="Decode" name="Decode">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}CodeListItem/{1}Decode</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="CodeListItem_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}CodeListItem</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="Decode_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}CodeListItem/{1}Decode</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="TranslatedText" name="TranslatedText3">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}CodeListItem/{1}Decode/{1}TranslatedText</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="Decode_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}CodeListItem/{1}Decode</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="TranslatedText3_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}CodeListItem/{1}Decode/{1}TranslatedText</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="lang">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}CodeListItem/{1}Decode/{1}TranslatedText/@{4}lang</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>2</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="TranslatedText3">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}CodeListItem/{1}Decode/{1}TranslatedText</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>92</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="Alias" name="Alias3">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}CodeListItem/{1}Alias</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="CodeListItem_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}CodeListItem</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="Alias3_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}CodeListItem/{1}Alias</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="Name">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}CodeListItem/{1}Alias/@Name</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>6</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Context">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}CodeListItem/{1}Alias/@Context</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>13</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="ExternalCodeList" name="ExternalCodeList">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}ExternalCodeList</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="CodeList_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="ExternalCodeList_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}ExternalCodeList</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="Dictionary">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}ExternalCodeList/@Dictionary</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>7</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Version">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}CodeList/{1}ExternalCodeList/@Version</PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>double</DATATYPE>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="MethodDef" name="MethodDef">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="MetaDataVersion_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="MethodDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="OID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/@OID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>14</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Name">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/@Name</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>46</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Type">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/@Type</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>11</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="Description" name="Description3">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/{1}Description</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="MethodDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="Description3_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/{1}Description</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="TranslatedText" name="TranslatedText4">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/{1}Description/{1}TranslatedText</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="Description3_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/{1}Description</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="TranslatedText4_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/{1}Description/{1}TranslatedText</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="lang">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/{1}Description/{1}TranslatedText/@{4}lang</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>2</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="TranslatedText4">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/{1}Description/{1}TranslatedText</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>337</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="DocumentRef" name="DocumentRef3">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/{3}DocumentRef</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="MethodDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="DocumentRef3_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/{3}DocumentRef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="leafID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/{3}DocumentRef/@leafID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="PDFPageRef" name="PDFPageRef1">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/{3}DocumentRef/{3}PDFPageRef</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="DocumentRef3_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/{3}DocumentRef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="PDFPageRef1_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/{3}DocumentRef/{3}PDFPageRef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="PageRefs">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/{3}DocumentRef/{3}PDFPageRef/@PageRefs</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>2</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Type">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/{3}DocumentRef/{3}PDFPageRef/@Type</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>16</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="FormalExpression" name="FormalExpression">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/{1}FormalExpression</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="MethodDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="FormalExpression_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/{1}FormalExpression</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="Context">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/{1}FormalExpression/@Context</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>93</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="FormalExpression">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{1}MethodDef/{1}FormalExpression</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>27</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="CommentDef" name="CommentDef">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="MetaDataVersion_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="CommentDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="OID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef/@OID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>23</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="Description" name="Description4">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef/{1}Description</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="CommentDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="Description4_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef/{1}Description</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="TranslatedText" name="TranslatedText5">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef/{1}Description/{1}TranslatedText</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="Description4_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef/{1}Description</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="TranslatedText5_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef/{1}Description/{1}TranslatedText</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="lang">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef/{1}Description/{1}TranslatedText/@{4}lang</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>2</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="TranslatedText5">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef/{1}Description/{1}TranslatedText</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>275</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="DocumentRef" name="DocumentRef4">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef/{3}DocumentRef</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="CommentDef_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="DocumentRef4_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef/{3}DocumentRef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="leafID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef/{3}DocumentRef/@leafID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>17</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="PDFPageRef" name="PDFPageRef2">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef/{3}DocumentRef/{3}PDFPageRef</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="DocumentRef4_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef/{3}DocumentRef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="PDFPageRef2_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef/{3}DocumentRef/{3}PDFPageRef</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="PageRefs">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef/{3}DocumentRef/{3}PDFPageRef/@PageRefs</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>10</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="Type">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}CommentDef/{3}DocumentRef/{3}PDFPageRef/@Type</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>16</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+    <!-- ############################################################ -->
+    <TABLE description="leaf" name="leaf1">
+        <TABLE-PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}leaf</TABLE-PATH>
+
+        <COLUMN class="ORDINAL" name="MetaDataVersion_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN class="ORDINAL" name="leaf1_ORDINAL">
+            <INCREMENT-PATH beginend="BEGIN" syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}leaf</INCREMENT-PATH>
+            <TYPE>numeric</TYPE>
+            <DATATYPE>integer</DATATYPE>
+        </COLUMN>
+
+        <COLUMN name="ID">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}leaf/@ID</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="href">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}leaf/@{2}href</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>21</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="title">
+            <PATH syntax="XPathENR">/{1}ODM/{1}Study/{1}MetaDataVersion/{3}leaf/{3}title</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>26</LENGTH>
+        </COLUMN>
+
+    </TABLE>
+
+</SXLEMAP>

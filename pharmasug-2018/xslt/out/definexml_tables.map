@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SXLEMAP name="define" version="2.1">
+<TABLE name="table_metadata">
+<TABLE-PATH syntax="XPath">/LIBRARY/ItemGroupDef</TABLE-PATH>
+<COLUMN name="sasref">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/sasref</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>SASreferences sourcedata libref</DESCRIPTION>
+<LENGTH>8</LENGTH>
+</COLUMN>
+<COLUMN name="table">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/table</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Table Name</DESCRIPTION>
+<LENGTH>32</LENGTH>
+</COLUMN>
+<COLUMN name="label">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/label</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Table Label</DESCRIPTION>
+<LENGTH>200</LENGTH>
+</COLUMN>
+<COLUMN name="order">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/order</PATH>
+<TYPE>numeric</TYPE>
+<DATATYPE>integer</DATATYPE>
+<DESCRIPTION>Table order</DESCRIPTION>
+<LENGTH>8</LENGTH>
+</COLUMN>
+<COLUMN name="repeating">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/repeating</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Can itemgroup occur repeatedly within the containing form?</DESCRIPTION>
+<LENGTH>3</LENGTH>
+</COLUMN>
+<COLUMN name="isreferencedata">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/isreferencedata</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Can itemgroup occur only within a ReferenceData element?</DESCRIPTION>
+<LENGTH>3</LENGTH>
+</COLUMN>
+<COLUMN name="domain">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/domain</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Domain</DESCRIPTION>
+<LENGTH>32</LENGTH>
+</COLUMN>
+<COLUMN name="domaindescription">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/domaindescription</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Domain description</DESCRIPTION>
+<LENGTH>256</LENGTH>
+</COLUMN>
+<COLUMN name="class">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/class</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Observation Class within Standard</DESCRIPTION>
+<LENGTH>40</LENGTH>
+</COLUMN>
+<COLUMN name="xmlpath">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/xmlpath</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>(Relative) path to xpt file</DESCRIPTION>
+<LENGTH>200</LENGTH>
+</COLUMN>
+<COLUMN name="xmltitle">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/xmltitle</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Title for xpt file</DESCRIPTION>
+<LENGTH>200</LENGTH>
+</COLUMN>
+<COLUMN name="structure">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/structure</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Table Structure</DESCRIPTION>
+<LENGTH>200</LENGTH>
+</COLUMN>
+<COLUMN name="purpose">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/purpose</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Purpose</DESCRIPTION>
+<LENGTH>10</LENGTH>
+</COLUMN>
+<COLUMN name="keys">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/keys</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Table Keys</DESCRIPTION>
+<LENGTH>200</LENGTH>
+</COLUMN>
+<COLUMN name="state">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/state</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Data Set State (Final, Draft)</DESCRIPTION>
+<LENGTH>20</LENGTH>
+</COLUMN>
+<COLUMN name="date">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/date</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Release Date</DESCRIPTION>
+<LENGTH>20</LENGTH>
+</COLUMN>
+<COLUMN name="comment">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/comment</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Comment</DESCRIPTION>
+<LENGTH>1000</LENGTH>
+</COLUMN>
+<COLUMN name="studyversion">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/studyversion</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Unique study version identifier</DESCRIPTION>
+<LENGTH>128</LENGTH>
+</COLUMN>
+<COLUMN name="standard">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/standard</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Name of Standard</DESCRIPTION>
+<LENGTH>20</LENGTH>
+</COLUMN>
+<COLUMN name="standardversion">
+<PATH syntax="XPath">/LIBRARY/ItemGroupDef/standardversion</PATH>
+<TYPE>character</TYPE>
+<DATATYPE>string</DATATYPE>
+<DESCRIPTION>Version of Standard</DESCRIPTION>
+<LENGTH>20</LENGTH>
+</COLUMN>
+</TABLE>
+</SXLEMAP>

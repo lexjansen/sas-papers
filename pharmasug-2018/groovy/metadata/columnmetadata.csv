@@ -1,0 +1,415 @@
+sasref	table	column	label	order	type	length	displayformat	significantdigits	xmldatatype	xmlcodelist	core	origin	origindescription	Role	algorithm	algorithmtype	formalexpression	formalexpressioncontext	comment	studyversion	standard	standardversion
+SRCDATA	TA	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TA	DOMAIN	Domain Abbreviation	2	C	2			text	CL.TA.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TA	ARMCD	Planned Arm Code	3	C	8			text	CL.ARMCD		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TA	ARM	Description of Planned Arm	4	C	20			text	CL.ARM		Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TA	TAETORD	Order of Element within Arm	5	N	1			integer			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TA	ETCD	Element Code	6	C	8			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TA	ELEMENT	Description of Element	7	C	40			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TA	TABRANCH	Branch	8	C	35			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TA	TATRANS	Transition Rule	9	C	1			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TA	EPOCH	Epoch	10	C	30			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TE	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TE	DOMAIN	Domain Abbreviation	2	C	2			text	CL.TE.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TE	ETCD	Element Code	3	C	8			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TE	ELEMENT	Description of Element	4	C	40			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TE	TESTRL	Rule for Start of Element	5	C	24			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TE	TEDUR	Planned Duration of Element	6	C	4			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TI	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TI	DOMAIN	Domain Abbreviation	2	C	2			text	CL.TI.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TI	IETESTCD	Incl/Excl Criterion Short Name	3	C	6			text	CL.IETESTCD		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TI	IETEST	Inclusion/Exclusion Criterion	4	C	92			text	CL.IETEST		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TI	IECAT	Inclusion/Exclusion Category	5	C	9			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TS	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TS	DOMAIN	Domain Abbreviation	2	C	2			text	CL.TS.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TS	TSSEQ	Sequence Number	3	N	1			integer			Derived			Sequential number identifying records within each TSPARM in the domain.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TS	TSPARMCD	Trial Summary Parameter Short Name	4	C	8			text	CL.TSPARMCD		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TS	TSPARM	Trial Summary Parameter	5	C	36			text	CL.TSPARM		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TS	TSVAL	Parameter Value	6	C	57			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TV	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TV	DOMAIN	Domain Abbreviation	2	C	2			text	CL.TV.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TV	VISITNUM	Visit Number	3	N	2			integer			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TV	VISIT	Visit Name	4	C	12			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TV	VISITDY	Planned Study Day of Visit	5	N	3			integer			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TV	ARMCD	Planned Arm Code	6	C	1			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	TV	TVSTRL	Visit Start Rule	7	C	30			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DM	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DM	DOMAIN	Domain Abbreviation	2	C	2			text	CL.DM.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DM	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DM	SUBJID	Subject Identifier for the Study	4	C	6			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DM	RFSTDTC	Subject Reference Start Date/Time	5	C				date			Derived			RFSTDTC = first date/time of study drug, for safety subject. Null for screen failures.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DM	RFENDTC	Subject Reference End Date/Time	6	C				date			Derived			RFENDTC = termination date, for safety subjects. Null for screen failures.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DM	SITEID	Study Site Identifier	7	C	3			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DM	BRTHDTC	Date/Time of Birth	8	C				date			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DM	AGE	Age	9	N	2			integer			Derived			Age at Screening Date (Screening Date - Birth date). For the complete algorithm see the\nreferenced external document.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DM	AGEU	Age Units	10	C	5			text			Assigned							Defaulted to YEARS	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DM	SEX	Sex	11	C	1			text	CL.SEX		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DM	RACE	Race	12	C	40			text	CL.RACE		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DM	ETHNIC	Ethnicity	13	C	22			text	CL.ETHNIC		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DM	ARMCD	Planned Arm Code	14	C	8			text	CL.ARMCD		Assigned							Assigned based on Randomization Number. See Note 2.1	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DM	ARM	Description of Planned Arm	15	C	20			text	CL.ARM		Assigned							Assigned from TA.ARM based on ARMCD.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DM	COUNTRY	Country	16	C	3			text	CL.ISO3166		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SE	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SE	DOMAIN	Domain Abbreviation	2	C	2			text	CL.SE.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SE	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SE	SESEQ	Sequence Number	4	N	1			integer			Derived			Sequential number identifying records within each USUBJID in the domain.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SE	ETCD	Element Code	5	C	7			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SE	ELEMENT	Description of Element	6	C	40			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SE	SESTDTC	Start Date/Time of Element	7	C				date			Derived			If Element = SCREEN, derived from SVSTDTC where VISIT = SCREENING or from DS where DSDECOD\n= 'INFORMED CONSENT', whichever is earliest. If Element = EOS, derived from DS where DSCAT = DISPOSITION EVENT. For treatment\nElements, derived from first EXSTDTC for the element. For the complete algorithm see the referenced external document.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SE	SEENDTC	End Date/Time of Element	8	C				date			Derived			If Element = SCREEN, derived from SVENDTC where VISIT = SCREENING. If Element = EOS,\nderived from DS where DSCAT = DISPOSITION EVENT or from the latest EXENDTC from EX whichever is later. For treatment Elements,\nderived from last EXENDTC for the element. For the complete algorithm see the referenced external document.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SE	TAETORD	Planned Order of Elements within Arm	9	N	1			integer			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SV	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SV	DOMAIN	Domain Abbreviation	2	C	2			text	CL.SV.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SV	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SV	VISITNUM	Visit Number	4	N	2			integer			Derived			Derived from visit-based subject-level domains	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SV	VISIT	Visit Name	5	C	8			text			Derived			Derived from visit-based subject-level domains	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SV	VISITDY	Planned Study Day of Visit	6	N	3			integer			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SV	SVSTDTC	Start Date/Time of Visit	7	C				date			Derived			Derived from visit-based subject-level domains	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SV	SVENDTC	End Date/Time of Visit	8	C				date			Derived			SVENDTC = SVSTDTC	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SV	SVSTDY	Study Day of Start of Visit	9	N	3			integer			Derived			SVSTDY = SVSTDTC-RFSTDTC+1 if SVSTDTC is on or after RFSTDTC. SVSTDTC - RFSTDTC if SVSTDTC\nprecedes RFSTDTC.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	DOMAIN	Domain Abbreviation	2	C	2			text	CL.CM.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	CMSEQ	Sequence Number	4	N	2			integer			Derived			Sequential number identifying records within each USUBJID in the domain.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	CMTRT	Reported Name of Drug, Med, or Therapy	5	C	23			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	CMMODIFY	Modified Reported Name	6	C	23			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	CMDECOD	Standardized Medication Name	7	C	30			text	CL.DRUGDICT_F		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	CMCAT	Category for Medication	8	C	36			text	CL.CMCAT		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	CMINDC	Indication	9	C	27			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	CMCLAS	Medication Class	10	C	45			text	CL.DRUGDICT_F		Assigned							Coded to ATC level 3 Term based on CMINDC	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	CMCLASCD	Medication Class Code	11	C	3			text	CL.DRUGDICT_F		Assigned							Coded to ATC level 3 Code based on CMINDC	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	CMDOSTXT	Dose Description	12	C	4			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	CMDOSU	Dose Units	13	C	6			text	CL.CMUNIT		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	CMDOSFRQ	Dosing Frequency per Interval	14	C	5			text	CL.FREQ		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	CMROUTE	Route of Administration	15	C	12			text	CL.ROUTE		CRF							Free text from CRF mapped to CDISC CT	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	CMSTDTC	Start Date/Time of Medication	16	C				date			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	CMENDTC	End Date/Time of Medication	17	C				date			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	CMSTDY	Study Day of Start of Medication	18	N	6			integer			Derived			CMSTDY = CMSTDTC - RFSTDTC +1 if CMSTDTC is on or after RFSTDTC. CMSTDTC - RFSTDTC if\nCMSTDTC precedes RFSTDTC	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	CMENDY	Study Day of End of Medication	19	N	4			integer			Derived			CMENDY = CMENDTC - RFSTDTC +1 if CMENDTC is on or after RFSTDTC. CMENDTC - RFSTDTC if\nCMENDTC precedes RFSTDTC	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	CM	CMENRF	End Relative to Reference Period	20	C	6			text	CL.CMENRF		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EX	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EX	DOMAIN	Domain Abbreviation	2	C	2			text	CL.EX.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EX	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EX	EXSEQ	Sequence Number	4	N	1			integer			Derived			Sequential number identifying records within each USUBJID in the domain.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EX	EXTRT	Name of Actual Treatment	5	C	20			text	CL.EXTRT		Derived			Derived from ARM, ARMCD	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EX	EXDOSE	Dose per Administration	6	N	2			integer			Derived			If ARMCD=WONDER10 then EXDOSE = Number of Tablets per Day (QVAL where QNAM=SMNO) * 10. If\nARMCD=WONDER20 then EXDOSE = Number of Tablets per Day (QVAL where QNAM=SMNO) * 20. If ARMCD=PLACEBO then EXDOSE = 0.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EX	EXDOSU	Dose Units	7	C	2			text			Derived			Derived from ARM, ARMCD - equal to mg	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EX	EXDOSFRM	Dose Form	8	C	7			text	CL.FRM		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EX	EXSTDTC	Start Date/Time of Treatment	9	C				date			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EX	EXENDTC	End Date/Time of Treatment	10	C				date			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EX	EXSTDY	Study Day of Start of Treatment	11	N	2			integer			Derived			EXSTDY = EXSTDTC - RFSTDTC+1 if EXSTDTC is on or after RFSTDTC. EXSTDTC - RFSTDTC if\nEXSTDTC precedes RFSTDTC.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EX	EXENDY	Study Day of End of Treatment	12	N	2			integer			Derived			EXENDY = EXENDTC-RFSTDTC+1 if EXENDTC is on or after RFSTDTC. EXENDTC - RFSTDTC if EXENDTC\nprecedes RFSTDTC.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	AE	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	AE	DOMAIN	Domain Abbreviation	2	C	2			text	CL.AE.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	AE	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	AE	AESEQ	Sequence Number	4	N	1			integer			Derived			Sequential number identifying records within each USUBJID in the domain.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	AE	AESPID	Sponsor-Defined Identifier	5	C	4			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	AE	AETERM	Reported Term for the Adverse Event	6	C	25			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	AE	AEMODIFY	Modified Reported Term	7	C	9			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	AE	AEDECOD	Dictionary-Derived Term	8	C	18			text	CL.AEDICT_F		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	AE	AEBODSYS	Body System or Organ Class	9	C	52			text	CL.AEDICT_F		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	AE	AESEV	Severity/Intensity	10	C	8			text	CL.AESEV		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	AE	AESER	Serious Event	11	C	1			text	CL.NY		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	AE	AEACN	Action Taken with Study Treatment	12	C	30			text	CL.ACN		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	AE	AEREL	Causality	13	C	16			text	CL.AEREL		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	AE	AESTDTC	Start Date/Time of Adverse Event	14	C				date			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	AE	AEENDTC	End Date/Time of Adverse Event	15	C				date			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	AE	AESTDY	Study Day of Start of Adverse Event	16	N	3			integer			Derived			AESTDY = AESTDTC - RFSTDTC+1 if AESTDTC is on or after RFSTDTC. AESTDTC - RFSTDTC if\nAESTDTC precedes RFSTDTC	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	AE	AEENDY	Study Day of End of Adverse Event	17	N	3			integer			Derived			AEENDY = AEENDTC -RFSTDTC+1 if AEENDTC is on or after RFSTDTC. AEENDTC - RFSTDTC if AEENDTC\nprecedes RFSTDTC	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	AE	AEENRF	End Relative to Reference Period	18	C	5			text	CL.AEENRF		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DS	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DS	DOMAIN	Domain Abbreviation	2	C	2			text	CL.DS.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DS	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DS	DSSEQ	Sequence Number	4	N	1			integer			Derived			Sequential number identifying records within each USUBJID in the domain.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DS	DSTERM	Reported Term for the Disposition Event	5	C	34			text	CL.TREASFF		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DS	DSDECOD	Standardized Disposition Term	6	C	21			text	CL.NCOMPLT		CRF							CRF controlled terminology was mapped to match CDISC controlled terminology.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DS	DSCAT	Category for Disposition Event	7	C	18			text	CL.DSCAT		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DS	EPOCH	Epoch	8	C	9			text	CL.EPOCH		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DS	DSSTDTC	Start Date/Time of Disposition Event	9	C				date			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DS	DSSTDY	Study Day of Start of Disposition Event	10	N	3			integer			Derived			DSSTDY = DSSTDTC - RFSTDTC+1 if DSSTDTC is on or after RFSTDTC. DSSTDTC - RFSTDTC if\nDSSTDTC precedes RFSTDTC. Null if RFSTDTC is Null.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	MH	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	MH	DOMAIN	Domain Abbreviation	2	C	2			text	CL.MH.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	MH	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	MH	MHSEQ	Sequence Number	4	N	1			integer			Derived			Sequential number identifying records within each USUBJID in the domain.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	MH	MHTERM	Reported Term for the Medical History	5	C	169			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	MH	MHCAT	Category for Medical History	6	C	28			text	CL.MHCAT		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	MH	MHPRESP	Medical History Event Pre-Specified	7	C	2			text	CL.NY		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	MH	MHOCCUR	Medical History Occurrence	8	C	2			text	CL.NY		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	MH	MHBODSYS	Body System or Organ Class	9	C	23			text	CL.MHBODSYS		Assigned							Assigned for Medical History but not Psychiatric History	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	MH	MHDTC	Date/Time of History Collection	10	C				date			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	MH	MHSTDTC	Start Date/Time of Medical History Event	11	C				date			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	MH	MHENRF	End Relative to Reference Period	12	C	30			text	CL.MHENRF		CRF							CRF controlled terminology was mapped to match CDISC controlled terminology.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DA	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DA	DOMAIN	Domain Abbreviation	2	C	2			text	CL.DA.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DA	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DA	DASEQ	Sequence Number	4	N	1			integer			Derived			Sequential number identifying records within each USUBJID in the domain.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DA	DATESTCD	Short Name of Accountability Assessment	5	C	7			text	CL.DATESTCD		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DA	DATEST	Name of Accountability Assessment	6	C	25			text	CL.DATEST		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DA	DAORRES	Assessment Result in Original Units	7	C	2			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DA	DAORRESU	Original Units	8	C	7			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DA	DASTRESC	Assessment Result in Std Format	9	C	2			text			Derived			DASTRESC = DAORRES	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DA	DASTRESN	Numeric Result/Finding in Standard Units	10	N	2			integer			Derived			DASTRESN = numeric value of DAORRES, when DAORRES contains numeric data.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DA	DASTRESU	Assessment Standard Units	11	C	7			text			Derived			DASTRESU = DAORRESU	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DA	VISITNUM	Visit Number	12	N	2			integer			Derived			Derived from DADTC and SVSTDTC.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DA	VISIT	Visit Name	13	C	8			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DA	VISITDY	Planned Study Day of Visit	14	N	3			integer			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DA	DADTC	Date/Time of Accountability Assessment	15	C				date			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	DA	DADY	Study Day of Accountability Assessment	16	N	3			integer			Derived			DADY = DADTC - RFSTDTC+1 if DADTC is on or after RFSTDTC. DADTC - RFSTDTC if DADTC precedes\nRFSTDTC.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	DOMAIN	Domain Abbreviation	2	C	2			text	CL.EG.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	EGSEQ	Sequence Number	4	N	2			integer			Derived			Sequential number identifying records within each USUBJID in the domain.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	EGSPID	Sponsor-Defined Identifier	5	C	6			text			Assigned							ECG parameter ordering variable	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	EGTESTCD	ECG Test or Examination Short Name	6	C	6			text	CL.EGTESTCD		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	EGTEST	ECG Test or Examination Name	7	C	40			text	CL.EGTEST		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	EGPOS	ECG Position of Subject	8	C	6			text			Protocol							Equal to SUPINE	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	EGORRES	Result or Finding in Original Units	9	C	15			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	EGORRESU	Original Units	10	C	4			text	CL.EGRESU		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	EGSTRESC	Character Result/Finding in Std Format	11	C	15			text			Derived			Data collected in non-standard units is converted using standard conversion factors to\nstandard units.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	EGSTRESN	Numeric Result/Finding in Standard Units	12	N	5	5.1	1	float			Derived			EGSTRESN = numeric value of EGSTRESC, when EGSTRESC contains numeric data.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	EGSTRESU	Standard Units	13	C	9			text	CL.EGRESU		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	EGBLFL	Baseline Flag	14	C	1			text	CL.NY		Derived			Safety subjects only: EGBLFL = "Y" for last record with non Null EGORRES on or before the\nfirst dose date (RFSTDTC). Null otherwise	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	EGDRVFL	Derived Flag	15	C	1			text	CL.NY		Derived			EGDRVFL = "Y" for derived EGTESTCDs QTCB and QTCF. Null otherwise.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	EGEVAL	Evaluator	16	C	12			text			Assigned							Equal to INVESTIGATOR for CRF data	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	VISITNUM	Visit Number	17	N	2			integer			Assigned							Assigned from the TV domain based on the VISIT	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	VISIT	Visit Name	18	C	7			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	VISITDY	Planned Study Day of Visit	19	N	3			integer			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	EGDTC	Date/Time of ECG	20	C				date			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	EG	EGDY	Study Day of ECG	21	N	3			integer			Derived			EGDY = EGDTC-RFSTDTC+1 if EGDTC is on or after RFTSDTC. EGDTC - RFSTDTC if EGDTC precedes\nRFSTDTC.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	IE	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	IE	DOMAIN	Domain Abbreviation	2	C	2			text	CL.IE.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	IE	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	IE	IESEQ	Sequence Number	4	N	1			integer			Derived			Sequential number identifying records within each USUBJID in the domain.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	IE	IETESTCD	Inclusion/Exclusion Criterion Short Name	5	C	6			text	CL.IETESTCD		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	IE	IETEST	Inclusion/Exclusion Criterion	6	C	54			text	CL.IETEST		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	IE	IECAT	Inclusion/Exclusion Category	7	C	9			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	IE	IEORRES	I/E Criterion Original Result	8	C	1			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	IE	IESTRESC	I/E Criterion Result in Std Format	9	C	1			text			Derived			IESTRESC = IEORRES	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	IE	VISITNUM	Visit Number	10	N	1			integer			Assigned							Assigned from the TV domain based on the VISIT	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	IE	VISIT	Visit Name	11	C	6			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	IE	IEDTC	Date/Time of Collection	12	C				date			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	DOMAIN	Domain Abbreviation	2	C	2			text	CL.LB.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBSEQ	Sequence Number	4	N	2			integer			Derived			Sequential number identifying records within each USUBJID in the domain.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBREFID	Specimen ID	5	C	7			text			eDT							Accession number	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBTESTCD	Lab Test or Examination Short Name	6	C	7			text	CL.LBTESTCD		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBTEST	Lab Test or Examination Name	7	C	22			text	CL.LBTEST		eDT								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBCAT	Category for Lab Test	8	C	10			text			eDT								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBORRES	Result or Finding in Original Units	9	C	8			text			eDT								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBORRESU	Original Units	10	C	7			text	CL.LBRESU		eDT								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBORNRLO	Reference Range Lower Limit in Orig Unit	11	C	8			text			eDT								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBORNRHI	Reference Range Upper Limit in Orig Unit	12	C	8			text			eDT								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBSTRESC	Character Result/Finding in Std Format	13	C	8			text			eDT								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBSTRESN	Numeric Result/Finding in Standard Units	14	N	5	5.2	2	float			eDT								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBSTRESU	Standard Units	15	C	7			text			eDT								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBSTNRLO	Reference Range Lower Limit-Std Units	16	N	4	4.2	2	float			eDT								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBSTNRHI	Reference Range Upper Limit-Std Units	17	N	4	4.2	2	float			eDT								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBSTNRC	Reference Range for Char Rslt-Std Units	18	C	19			text			eDT								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBNRIND	Reference Range Indicator	19	C	20			text	CL.NRIND		Derived			Reference Range Indicator based upon standard results and ranges.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBSPEC	Specimen Type	20	C	5			text	CL.SPECTYPE		eDT								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBMETHOD	Method of Test or Examination	21	C	8			text	CL.METHOD		eDT								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBBLFL	Baseline Flag	22	C	1			text	CL.NY		Derived			Safety subjects only: LBBLFL = "Y" for last record with non Null LBORRES on or before the\nfirst dose date (RFSTDTC). Null otherwise.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBFAST	Fasting Status	23	C	1			text	CL.NY		eDT								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	VISITNUM	Visit Number	24	N	2			integer			eDT								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	VISIT	Visit Name	25	C	7			text			eDT								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	VISITDY	Planned Study Day of Visit	26	N	3			integer			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBDTC	Date/Time of Specimen Collection	27	C				datetime			eDT								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	LB	LBDY	Study Day of Specimen Collection	28	N	3			integer			Derived			LBDY = LBDTC-RFSTDTC+1 if LBDTC is on or after RFSTDTC. LBDTC - RFSTDTC if LBDTC precedes\nRFSTDTC.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	PE	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	PE	DOMAIN	Domain Abbreviation	2	C	2			text	CL.PE.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	PE	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	PE	PESEQ	Sequence Number	4	N	2			integer			Derived			Sequential number identifying records within each USUBJID in the domain.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	PE	PETESTCD	Body System Examined Short Name	5	C	4			text	CL.PETESTCD		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	PE	PETEST	Body System Examined	6	C	29			text	CL.PETEST		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	PE	PEORRES	Verbatim Examination Finding	7	C	36			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	PE	PESTRESC	Character Result/Finding in Std Format	8	C	26			text			Derived			PESTRESC = PEORRES	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	PE	VISITNUM	Visit Number	9	N	2			integer			Assigned							Assigned from the TV domain based on the VISIT	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	PE	VISIT	Visit Name	10	C	7			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	PE	VISITDY	Planned Study Day of Visit	11	N	3			integer			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	PE	PEDTC	Date/Time of Examination	12	C				date			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	PE	PEDY	Study Day of Examination	13	N	3			integer			Derived			PEDY = PEDTC-RFSTDTC+1 if PEDTC is on or after RFSTDTC. PEDTC - RFSTDTC if PEDTC precedes\nRFSTDTC.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCG	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCG	DOMAIN	Domain Abbreviation	2	C	2			text	CL.QS.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCG	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCG	QSSEQ	Sequence Number	4	N	3			integer			Derived			Sequential number identifying records within each USUBJID in the domain.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCG	QSTESTCD	Question Short Name	5	C	7			text	CL.QSTESTCD		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCG	QSTEST	Question Name	6	C	37			text	CL.QSTEST		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCG	QSCAT	Category of Question	7	C	50			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCG	QSORRES	Finding in Original Units	9	C	20			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCG	QSSTRESC	Character Result/Finding in Std Format	10	C	2			text			Derived			If questionnaire result is a numerically relevant code then code stored here; else\ncharacter result equal to QSORRES. Character results contain mixed case data.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCG	QSSTRESN	Numeric Finding in Standard Units	11	N	2			integer			Derived			When QSORRES is numeric then QSSTRESN equal to numeric result	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCG	VISITNUM	Visit Number	13	N	2			integer			Assigned							Assigned from the TV domain based on the VISIT	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCG	VISIT	Visit Name	14	C	8			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCG	VISITDY	Planned Study Day of Visit	15	N	3			integer			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCG	QSDTC	Date/Time of Finding	16	C				date			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCG	QSDY	Study Day of Finding	17	N	3			integer			Derived			QSDY= QSDTC-RFSTDTC+1 if QSDTC is on or after RFSTDTC. QSDTC - RFSTDTC if QSDTC precedes\nRFSTDTC.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCS	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCS	DOMAIN	Domain Abbreviation	2	C	2			text	CL.QS.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCS	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCS	QSSEQ	Sequence Number	4	N	3			integer			Derived			Sequential number identifying records within each USUBJID in the domain.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCS	QSTESTCD	Question Short Name	5	C	7			text	CL.QSTESTCD		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCS	QSTEST	Question Name	6	C	37			text	CL.QSTEST		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCS	QSCAT	Category of Question	7	C	50			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCS	QSSCAT	Subcategory for Question	8	C	40			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCS	QSORRES	Finding in Original Units	9	C	20			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCS	QSSTRESC	Character Result/Finding in Std Format	10	C	2			text			Derived			If questionnaire result is a numerically relevant code then code stored here; else\ncharacter result equal to QSORRES. Character results contain mixed case data.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCS	QSSTRESN	Numeric Finding in Standard Units	11	N	2			integer			Derived			When QSORRES is numeric then QSSTRESN equal to numeric result	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCS	QSBLFL	Baseline Flag	12	C	1			text	CL.NY		Derived			Safety subjects only: QSBLFL = "Y" for last record with non Null QSORRES on or before the\nfirst dose date (RFSTDTC). Null otherwise.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCS	VISITNUM	Visit Number	13	N	2			integer			Assigned							Assigned from the TV domain based on the VISIT	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCS	VISIT	Visit Name	14	C	8			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCS	VISITDY	Planned Study Day of Visit	15	N	3			integer			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCS	QSDTC	Date/Time of Finding	16	C				date			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCS	QSDY	Study Day of Finding	17	N	3			integer			Derived			QSDY= QSDTC-RFSTDTC+1 if QSDTC is on or after RFSTDTC. QSDTC - RFSTDTC if QSDTC precedes\nRFSTDTC.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSCS	QSEVLINT	Evaluation Interval	18	C	20			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSMM	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSMM	DOMAIN	Domain Abbreviation	2	C	2			text	CL.QS.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSMM	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSMM	QSSEQ	Sequence Number	4	N	3			integer			Derived			Sequential number identifying records within each USUBJID in the domain.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSMM	QSTESTCD	Question Short Name	5	C	7			text	CL.QSTESTCD		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSMM	QSTEST	Question Name	6	C	37			text	CL.QSTEST		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSMM	QSCAT	Category of Question	7	C	50			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSMM	QSORRES	Finding in Original Units	9	C	20			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSMM	QSSTRESC	Character Result/Finding in Std Format	10	C	2			text			Derived			If questionnaire result is a numerically relevant code then code stored here; else\ncharacter result equal to QSORRES. Character results contain mixed case data.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSMM	QSSTRESN	Numeric Finding in Standard Units	11	N	2			integer			Derived			When QSORRES is numeric then QSSTRESN equal to numeric result	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSMM	QSBLFL	Baseline Flag	12	C	1			text	CL.NY		Derived			Safety subjects only: QSBLFL = "Y" for last record with non Null QSORRES on or before the\nfirst dose date (RFSTDTC). Null otherwise.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSMM	VISITNUM	Visit Number	13	N	2			integer			Assigned							Assigned from the TV domain based on the VISIT	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSMM	VISIT	Visit Name	14	C	8			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSMM	VISITDY	Planned Study Day of Visit	15	N	3			integer			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSMM	QSDTC	Date/Time of Finding	16	C				date			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	QSMM	QSDY	Study Day of Finding	17	N	3			integer			Derived			QSDY= QSDTC-RFSTDTC+1 if QSDTC is on or after RFSTDTC. QSDTC - RFSTDTC if QSDTC precedes\nRFSTDTC.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SC	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SC	DOMAIN	Domain Abbreviation	2	C	2			text	CL.SC.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SC	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SC	SCSEQ	Sequence Number	4	N	1			integer			Derived			Sequential number identifying records within each USUBJID in the domain.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SC	SCTESTCD	Subject Characteristic Short Name	5	C	8			text	CL.SCTESTCD		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SC	SCTEST	Subject Characteristic	6	C	16			text	CL.SCTEST		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SC	SCORRES	Result or Finding in Original Units	7	C	24			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SC	SCSTRESC	Character Result/Finding in Std Format	8	C	24			text			Derived			SCSTRESC = SCORRES	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SC	SCDTC	Date/Time of Collection	9	C				date			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SC	SCDY	Study Day of Examination	10	N	3			integer			Derived			SCDY = SCDTC-RFSTDTC+1 if SCDTC is on or after RFSTDTC. SCDTC - RFSTDTC if SCDTC precedes\nRFSTDTC.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	VS	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	VS	DOMAIN	Domain Abbreviation	2	C	2			text	CL.VS.DOMAIN		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	VS	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	VS	VSSEQ	Sequence Number	4	N	2			integer			Derived			Sequential number identifying records within each USUBJID in the domain.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	VS	VSTESTCD	Vital Signs Test Short Name	5	C	20			text	CL.VSTESTCD		Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	VS	VSTEST	Vital Signs Test Name	6	C	24			text	CL.VSTEST		CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	VS	VSPOS	Vital Signs Position of Subject	7	C	7			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	VS	VSORRES	Result or Finding in Original Units	8	C	30			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	VS	VSORRESU	Original Units	9	C	20			text			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	VS	VSSTRESC	Character Result/Finding in Std Format	10	C	30			text			Derived			Data collected in non-standard units (i.e. lbs, inches) is converted using standard\nconversion factors to standard units (kg, cm).	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	VS	VSSTRESN	Numeric Result/Finding in Standard Units	11	N	5	5.1	1	float			Derived			VSSTRESN = numeric value of VSSTRESC, when VSSTRESC contains numeric data.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	VS	VSSTRESU	Standard Units	12	C	9			text	CL.VSRESU		Assigned							Standard units consistent with CDISC controlled terminology	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	VS	VSBLFL	Baseline Flag	13	C	1			text	CL.NY		Derived			Safety subjects only: VSBLFL = "Y" for last record with non Null VSORRES on or before the\nfirst dose date (RFSTDTC). Null otherwise.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	VS	VISITNUM	Visit Number	14	N	2			integer			Assigned							Assigned from the TV domain based on the VISIT	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	VS	VISIT	Visit Name	15	C	8			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	VS	VISITDY	Planned Study Day of Visit	16	N	3			integer			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	VS	VSDTC	Date/Time of Measurements	17	C				date			CRF								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	VS	VSDY	Study Day of Vital Signs	18	N	3			integer			Derived			VSDY = VSDTC-RFSTDTC+1 if VSDTC is on or after RFSTDTC. VSDTC - RFSTDTC if VSDTC precedes\nRFSTDTC.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	RELREC	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	RELREC	RDOMAIN	Related Domain Abbreviation	2	C	2			text			Derived			Domain abbreviation from where data originated.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	RELREC	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	RELREC	IDVAR	Identifying Variable	4	C	8			text			Assigned							Name of the variables for the related records.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	RELREC	IDVARVAL	Identifying Variable Value	5	C	2			text			Assigned							Value of identifying variable described in IDVAR.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	RELREC	RELTYPE	Relationship Type	6	C	4			text			Assigned							All values are null since this is used only when identifying a dataset-level relationship.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	RELREC	RELID	Relationship Identifier	7	C	10			text			Derived			All records for the same USUBJID with the same RELID are considered related.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPAE	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPAE	RDOMAIN	Related Domain Abbreviation	2	C	2			text			Derived			Domain abbreviation from where data originated.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPAE	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPAE	IDVAR	Identifying Variable	4	C	5			text			Assigned							Name of the variables for the related records.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPAE	IDVARVAL	Identifying Variable Value	5	C	1			text			Assigned							Value of identifying variable described in IDVAR.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPAE	QNAM	Qualifier Variable Name	6	C	7			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPAE	QLABEL	Qualifier Variable Label	7	C	30			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPAE	QVAL	Data Value	8	C	60			text											MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPAE	QORIG	Origin	9	C	7			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPAE	QEVAL	Evaluator	10	C	30			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPCM	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPCM	RDOMAIN	Related Domain Abbreviation	2	C	2			text			Derived			Domain abbreviation from where data originated.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPCM	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPCM	IDVAR	Identifying Variable	4	C	5			text			Assigned							Name of the variables for the related records.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPCM	IDVARVAL	Identifying Variable Value	5	C	2			text			Assigned							Value of identifying variable described in IDVAR.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPCM	QNAM	Qualifier Variable Name	6	C	8			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPCM	QLABEL	Qualifier Variable Label	7	C	26			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPCM	QVAL	Data Value	8	C	43			text											MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPCM	QORIG	Origin	9	C	10			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPCM	QEVAL	Evaluator	10	C	30			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPDM	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPDM	RDOMAIN	Related Domain Abbreviation	2	C	2			text			Derived			Domain abbreviation from where data originated.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPDM	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPDM	IDVAR	Identifying Variable	4	C	1			text			Assigned							Name of the variables for the related records.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPDM	IDVARVAL	Identifying Variable Value	5	C	1			text			Assigned							Value of identifying variable described in IDVAR.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPDM	QNAM	Qualifier Variable Name	6	C	8			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPDM	QLABEL	Qualifier Variable Label	7	C	26			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPDM	QVAL	Data Value	8	C	30			text											MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPDM	QORIG	Origin	9	C	11			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPDM	QEVAL	Evaluator	10	C	30			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEG	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEG	RDOMAIN	Related Domain Abbreviation	2	C	2			text			Derived			Domain abbreviation from where data originated.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEG	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEG	IDVAR	Identifying Variable	4	C	5			text			Assigned							Name of the variables for the related records.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEG	IDVARVAL	Identifying Variable Value	5	C	2			text			Assigned							Value of identifying variable described in IDVAR.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEG	QNAM	Qualifier Variable Name	6	C	7			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEG	QLABEL	Qualifier Variable Label	7	C	36			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEG	QVAL	Data Value	8	C	2			text											MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEG	QORIG	Origin	9	C	7			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEG	QEVAL	Evaluator	10	C	30			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEX	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEX	RDOMAIN	Related Domain Abbreviation	2	C	2			text			Derived			Domain abbreviation from where data originated.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEX	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEX	IDVAR	Identifying Variable	4	C	5			text			Assigned							Name of the variables for the related records.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEX	IDVARVAL	Identifying Variable Value	5	C	1			text			Assigned							Value of identifying variable described in IDVAR.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEX	QNAM	Qualifier Variable Name	6	C	4			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEX	QLABEL	Qualifier Variable Label	7	C	25			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEX	QVAL	Data Value	8	C	2			text											MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEX	QORIG	Origin	9	C	11			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPEX	QEVAL	Evaluator	10	C	30			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPLB	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPLB	RDOMAIN	Related Domain Abbreviation	2	C	2			text			Derived			Domain abbreviation from where data originated.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPLB	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPLB	IDVAR	Identifying Variable	4	C	5			text			Assigned							Name of the variables for the related records.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPLB	IDVARVAL	Identifying Variable Value	5	C	2			text			Assigned							Value of identifying variable described in IDVAR.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPLB	QNAM	Qualifier Variable Name	6	C	7			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPLB	QLABEL	Qualifier Variable Label	7	C	36			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPLB	QVAL	Data Value	8	C	2			text											MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPLB	QORIG	Origin	9	C	7			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPLB	QEVAL	Evaluator	10	C	30			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCG	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCG	RDOMAIN	Related Domain Abbreviation	2	C	2			text			Derived			Domain abbreviation from where data originated.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCG	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCG	IDVAR	Identifying Variable	4	C	5			text			Assigned							Name of the variables for the related records.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCG	IDVARVAL	Identifying Variable Value	5	C	50			text			Assigned							Value of identifying variable described in IDVAR.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCG	QNAM	Qualifier Variable Name	6	C	7			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCG	QLABEL	Qualifier Variable Label	7	C	36			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCG	QVAL	Data Value	8	C	3			text											MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCG	QORIG	Origin	9	C	7			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCG	QEVAL	Evaluator	10	C	30			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCS	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCS	RDOMAIN	Related Domain Abbreviation	2	C	2			text			Derived			Domain abbreviation from where data originated.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCS	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCS	IDVAR	Identifying Variable	4	C	5			text			Assigned							Name of the variables for the related records.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCS	IDVARVAL	Identifying Variable Value	5	C	50			text			Assigned							Value of identifying variable described in IDVAR.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCS	QNAM	Qualifier Variable Name	6	C	7			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCS	QLABEL	Qualifier Variable Label	7	C	36			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCS	QVAL	Data Value	8	C	3			text											MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCS	QORIG	Origin	9	C	7			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSCS	QEVAL	Evaluator	10	C	30			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSMM	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSMM	RDOMAIN	Related Domain Abbreviation	2	C	2			text			Derived			Domain abbreviation from where data originated.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSMM	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSMM	IDVAR	Identifying Variable	4	C	5			text			Assigned							Name of the variables for the related records.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSMM	IDVARVAL	Identifying Variable Value	5	C	50			text			Assigned							Value of identifying variable described in IDVAR.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSMM	QNAM	Qualifier Variable Name	6	C	7			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSMM	QLABEL	Qualifier Variable Label	7	C	36			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSMM	QVAL	Data Value	8	C	3			text											MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSMM	QORIG	Origin	9	C	7			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPQSMM	QEVAL	Evaluator	10	C	30			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPVS	STUDYID	Study Identifier	1	C	7			text			Protocol								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPVS	RDOMAIN	Related Domain Abbreviation	2	C	2			text			Derived			Domain abbreviation from where data originated.	Computation				MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPVS	USUBJID	Unique Subject Identifier	3	C	14			text			Derived			Concatenation of STUDYID and SUBJID	Computation	catx(".",STUDYID,SUBJID)	SAS 9.0 or later, as part of a data step assignment or proc sql select and update statements.		MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPVS	IDVAR	Identifying Variable	4	C	5			text			Assigned							Name of the variables for the related records.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPVS	IDVARVAL	Identifying Variable Value	5	C	2			text			Assigned							Value of identifying variable described in IDVAR.	MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPVS	QNAM	Qualifier Variable Name	6	C	7			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPVS	QLABEL	Qualifier Variable Label	7	C	36			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPVS	QVAL	Data Value	8	C	2			text											MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPVS	QORIG	Origin	9	C	7			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
+SRCDATA	SUPPVS	QEVAL	Evaluator	10	C	30			text			Assigned								MDV.CDISC01.SDTMIG.3.1.2.SDTM.1.2	SDTM-IG	3.1.2
