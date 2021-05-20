@@ -11,6 +11,9 @@ Run the programs in the programs folder in the following order:
 - extract_cdisc_library_products.sas
 - extract_cdisc_library_terminology.sas
 - extract_cdisc_library_tabulation.sas 
+
+In all of these programs change the global macro variable project_folder to point to your project folder.
+
  
 
 Disclaimer
