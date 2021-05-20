@@ -7,6 +7,9 @@ options sasautos=(sasautos "&project_folder/macros");
 options nomprint nomlogic nosymbolgen;
 
 filename luapath ("&project_folder/lua");
+ 
+%* This file contains the credentials;
+%let credentials_file=&project_folder/programs/credentials.cfg;
 
 %if %sysfunc(find(&sysscp,WIN)) %then %do;
   %let rest_proxyhost=;
@@ -23,15 +26,6 @@ filename luapath ("&project_folder/lua");
 %let rest_timeout=;
 %let rest_debug=;
 */
-
-%* This file needs to define credential macro variable: ;
-%* cdisc_api_primary_key                                ;
-%if (&sysscp=WIN) %then %do;
-  %read_config_file(
-    config_file=%sysget(CREDENTIALS_FILE), 
-    sections=%str("cdisclibrary")
-  );
-%end;  
 
 %let base_url=https://library.cdisc.org/api;
 

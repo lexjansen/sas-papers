@@ -3,6 +3,15 @@ PharmaSUG 2021, May 24 - 28
 Lex Jansen, SAS Institute Inc., Cary, NC, USA
 
  
+Run the programs in the programs folder in the following order:
+
+- create_templates.sas
+- create_mapping_specification.sas
+- extract_cdisc_library_lastupdated.sas
+- extract_cdisc_library_products.sas
+- extract_cdisc_library_terminology.sas
+- extract_cdisc_library_tabulation.sas 
+ 
 
 Disclaimer
 

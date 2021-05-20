@@ -2,6 +2,11 @@
 %let project_folder=C:/_projects/sas-papers/pharmasug-2021;
 
 
+
+
+%* Generic configuration;
+%include "&project_folder/programs/config.sas";
+
 filename luapath ("&project_folder/lua");
 filename lastupd "&project_folder/response_json/_lastupdated_.json";
 
@@ -13,7 +18,7 @@ proc lua restart;
     json = require 'json'
     fileutils = require 'fileutils'
     
-    local token = fileutils.read_config(sas.sysget('CREDENTIALS_FILE')).cdisclibrary.cdisc_api_primary_key
+    local token = fileutils.read_config(sas.symget('credentials_file')).cdisclibrary.cdisc_api_primary_key
     rest.base_url = 'https://library.cdisc.org/api'
     rest.headers='"Accept"="application/json" "api-key"='..'"'..token..'"'
 

@@ -23,7 +23,7 @@ proc lua restart;
     _debug = sas.symget("_debug") == 1
     sas.set_quiet(false)
 
-    local token = fileutils.read_config(sas.sysget('CREDENTIALS_FILE')).cdisclibrary.cdisc_api_primary_key
+    local token = fileutils.read_config(sas.symget('credentials_file')).cdisclibrary.cdisc_api_primary_key
 
     rest.base_url = sas.symget("base_url")
     rest.headers='"Accept"="application/json" "api-key"='..'"'..token..'"'
