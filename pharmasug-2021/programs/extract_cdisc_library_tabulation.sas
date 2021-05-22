@@ -32,7 +32,7 @@ proc lua restart;
     rest.debug = sas.symget("rest_debug")
 
     -- Setting to false will reveal PROC HTTP statement in the LOG with username/password !!
-    rest.quiet=false
+    rest.quiet=true
 
     product_types = {
       'Foundational Model',
