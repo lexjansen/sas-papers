@@ -28,6 +28,7 @@ Supporting folders:
  - schema-repository - Define-XML 2.0 XML schema files 
  - templates         - supporting templates
  - xml               - sample Define-XML v2.0 file 
+ - doc               - paper and slides
  
 
 Disclaimer
