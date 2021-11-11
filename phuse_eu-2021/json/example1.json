@@ -1,0 +1,65 @@
+{
+  "codelists": [
+    {
+      "conceptId": "C71620",
+      "definition": "Terminology codelist used for units within CDISC.",
+      "extensible": "true",
+      "name": "Unit",
+      "preferredTerm": "CDISC SDTM Unit of Measure Terminology",
+      "submissionValue": "UNIT",
+      "terms": [
+        {
+          "conceptId": "C25529",
+          "definition": "A unit of measurement of time equal to 60 minutes.",
+          "preferredTerm": "Hour",
+          "submissionValue": "HOURS",
+          "synonyms": [
+            "Hours",
+            "h",
+            "hr"
+          ]
+        },
+        {
+          "conceptId": "C48154",
+          "definition": "A unit of measurement of time equal to 60 seconds.",
+          "preferredTerm": "Minute",
+          "submissionValue": "min",
+          "synonyms": [
+            "Minute"
+          ]
+        }
+      ]
+    },
+    {
+      "conceptId": "C85494",
+      "definition": "Units of measure for pharmacokinetic data and parameters.",
+      "extensible": "true",
+      "name": "PK Units of Measure",
+      "preferredTerm": "CDISC SDTM Pharmacokinetic Parameter Unit of Measure Terminology",
+      "submissionValue": "PKUNIT",
+      "terms": [
+        {
+          "conceptId": "C25613",
+          "definition": "One hundred times the quotient of one quantity divided by another, with the same units of measurement.",
+          "preferredTerm": "Percentage",
+          "submissionValue": "%",
+          "synonyms": [
+            "Percentage"
+          ]
+        },
+        {
+          "conceptId": "C117963",
+          "definition": "The rate of measured normal activity minus inhibited activity, divided by the rate of normal activity of a given object. It is expressed as a percentage.",
+          "preferredTerm": "Percent Inhibition",
+          "submissionValue": "% INHIBITION",
+          "synonyms": [
+            "Percent Inhibition"
+          ]
+        }
+        
+    ]
+  }
+  ]
+}
+
+
