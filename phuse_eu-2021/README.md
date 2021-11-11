@@ -1,4 +1,4 @@
-Code from the paper Parsing JSON Files in SAS© Using PROC LUA
+Code from the paper Parsing JSON Files in SAS© Using PROC LUA 
 PHUSE EU Connect 2021, November 15 - 18
 
 Lex Jansen, SAS Institute Inc., Cary, NC, USA
@@ -13,11 +13,8 @@ Run the programs in the programs folder in the following order:
 - test_lua_json_libraries.sas
 
 You may need to Change the global macro variable project_folder to point to your project folder.
+The last 2 programs will extract a json file from the CDISC Library: json/sdtmct_20210625.json This will onloy work after you replace the CDISC Library API token with your own personal token in the line: local token = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
-The last 2 programs will extract a json file from the CDISC Library: json/sdtmct_20210625.json
-This will onloy work after you replace the CDISC Library API token with your own personal token in the line:
-  local token = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
- 
 
 
 Disclaimer
