@@ -2,7 +2,8 @@
 
 Please check back later.
 
-This repository will contain code and examples from the paper Working with Dataset-JSON using SAS©,
+This repository will contain code and examples from the paper Working with Dataset-JSON using SAS©
+
 presented at PharmaSUG 2022, May 22 - 25
 
 Lex Jansen, CDISC (Lex Jansen Consulting LLC)
