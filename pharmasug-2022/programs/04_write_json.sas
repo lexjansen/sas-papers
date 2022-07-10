@@ -1,13 +1,7 @@
-%* update this location to your own location;
-%let root=/_github/lexjansen/sas-papers/pharmasug-2022;
-
-%include "&root/programs/config.sas";
-
-
 %macro process(dataset, model);
   %local dataset_name dataset_label records 
     studyOID metaDataVersionOID
-    ClinicalReferenceData ItemGroupOID fractiondigits;
+    ClinicalReferenceData ItemGroupOID;
 
   %let dataset_name=%scan(&dataset, -1, %str(.));
   %let dataset_label=;
@@ -32,24 +26,15 @@
       from metadata.metadata_tables
         where upcase(name)="%upcase(&dataset_name)";
   quit;
-
+  
   %put ### &=dataset &=records &=ClinicalReferenceData &=ItemGroupOID dslabel=%bquote(&dataset_label);
 
-  data work.column_metadata(keep=OID name label type length fractionDigits);
-    retain OID name label type length fractionDigits;
+  data work.column_metadata(keep=OID name label type length);
+    retain OID name label type length;
     set metadata.metadata_columns(
       rename=(json_datatype=type)
       where=(upcase(dataset_name) = %upcase("&dataset_name")));
   run;
-
-  /* Count the number of records with a fractiondigits value */
-  %let fractiondigits=0;
-  proc sql noprint;
-    select count(*) into :fractiondigits
-      from work.column_metadata
-        where not(missing(fractionDigits))
-    ;
-  quit;
 
   /* Create a 1-obs dataset with the same structure as the column_metadata dataset */
   proc sql noprint;
@@ -57,14 +42,13 @@
       like work.column_metadata;
     insert into itemgroupdataseq
       set OID="ITEMGROUPDATASEQ", name="ITEMGROUPDATASEQ", label="Record Identifier",
-        type="integer", length=8;
+        type="integer";
   quit;
 
-  /* Only include fractiondigits variable if it has a value */
-  data work.column_metadata(%if &fractiondigits=0 %then drop=fractiondigits;);
+  data work.column_metadata;
     set itemgroupdataseq work.column_metadata;
   run;
-
+  
   %******************************************************************************;
   data work.column_data;
     length ITEMGROUPDATASEQ 8.;
@@ -88,10 +72,11 @@
     WRITE VALUES "records" &records;
     WRITE VALUES "name" "%upcase(&dataset_name)";
     WRITE VALUES "label" "&dataset_label";
+
     WRITE VALUE "items";
-    WRITE OPEN ARRAY;
-    EXPORT work.column_metadata  / KEYS;
+    %write_json_metadata_array(work.column_metadata);
     WRITE CLOSE;
+
     WRITE VALUE "itemData";
     WRITE OPEN ARRAY;
     EXPORT work.column_data / NOKEYS;
@@ -112,6 +97,9 @@
   run;
 
 %mend process;
+
+%let root=/_github/lexjansen/sas-papers/pharmasug-2022;
+%include "&root/programs/config.sas";
 
 
 

@@ -68,8 +68,7 @@ proc lua restart;
       { name="xml_datatype", label="Define-XML DataType", type="C", length=32},
       { name="json_datatype", label="Dataset-JSON DataType", type="C", length=32},
       { name="length", label="Length", type="N"},
-      { name="displayformat", label="Display format", type="C", length=32}, 
-      { name="fractiondigits", label="FractionDigits", type="N"}
+      { name="displayformat", label="Display format", type="C", length=32} 
     })
 
     dsid_s = sas.open('metadata.metadata_study', "u")
@@ -87,7 +86,6 @@ proc lua restart;
       items["DataType"] = it['@DataType']
       items["Length"] = tonumber(it['@Length'])
       items["DisplayFormat"] = it['@DisplayFormat'] 
-      items["FractionDigits"] = tonumber(it['@SignificantDigits']) 
       itemtbl[it['@OID']] = items
     end
 
@@ -118,7 +116,6 @@ proc lua restart;
         sas.put_value(dsid_c, "xml_datatype", itemtbl[it['@ItemOID']].DataType)
         sas.put_value(dsid_c, "order", tonumber(it['@OrderNumber']))
         if tonumber(itemtbl[it['@ItemOID']].Length) ~= nil then sas.put_value(dsid_c, "length", itemtbl[it['@ItemOID']].Length) end
-        if tonumber(itemtbl[it['@ItemOID']].FractionDigits) ~= nil then sas.put_value(dsid_c, "FractionDigits", itemtbl[it['@ItemOID']].FractionDigits) end
         if itemtbl[it['@ItemOID']].DisplayFormat ~= nil then sas.put_value(dsid_c, "DisplayFormat", itemtbl[it['@ItemOID']].DisplayFormat) end
         sas.put_value(dsid_c, "json_datatype", datatype_mapping[itemtbl[it['@ItemOID']].DataType])
         sas.update(dsid_c)
@@ -135,13 +132,12 @@ run;
 libname metadata clear;
 
 
-* Some manual data type / fractiondigits updates;
+* Some manual data type updates;
 libname metasdtm "&root/metadata/sdtm";
 data metasdtm.metadata_columns;
   set metasdtm.metadata_columns;
   if xml_datatype='float' then do;
     if name ne 'LBSTRESN' then json_datatype='decimal';
-                          else fractiondigits=.;
   end;
 run;
 libname metasdtm clear;
@@ -151,9 +147,7 @@ data metaadam.metadata_columns;
   set metaadam.metadata_columns;
   if xml_datatype='float' then do;
     if index(name, 'VISIT') then json_datatype='decimal';
-                            else fractiondigits=.;
   end;
-  if not (json_datatype in ('decimal' 'float' 'double')) then fractiondigits=.;
 run;
 libname metaadam clear;
   
