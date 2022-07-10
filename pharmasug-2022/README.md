@@ -1,21 +1,11 @@
 # PharmaSUG 2022
 
-Please check back later.
+This repository contains all code and examples from the paper Working with Dataset-JSON using SAS©
+Presented at PharmaSUG 2022, May 22 - 25
 
-This repository will contain code and examples from the paper Working with Dataset-JSON using SAS©
+After the conference the code was updated because of the following reasons:
 
-presented at PharmaSUG 2022, May 22 - 25
+- the Dataset-JSON specification was updated to remove the fractionDigits attribute
+- the code no longer creates a null value when a metadata attribute is missing
 
 Lex Jansen, CDISC (Lex Jansen Consulting LLC)
-
-Disclaimer
-
-THIS CODE IS PROVIDED "AS IS" WITHOUT WARRANTY OF
-ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR
-NON-INFRINGEMENT. SAS Institute shall not be liable whatsoever for any damages
-arising out of the use of this documentation or code, including any direct,
-indirect, or consequential damages. The Institute reserves the right to alter or
-abandon use of this documentation at any time. In addition, the Institute will
-provide no support for the materials contained herein.
->>>>>>> b7367159f5587fe85413de8b8d7a313cf7938bbe
