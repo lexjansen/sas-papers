@@ -1,5 +1,7 @@
 %macro write_json_metadata_array(dset);
 
+ %* This macro avoids creating an attribute when the value is missing; 
+
  %local xldset_id nobs nvars varlist vartype i xl_cnt code _varnum _value;
  %let xldset_id =%sysfunc(open(&dset.)); 
  %let nobs=%sysfunc(attrn(&xldset_id.,NOBS)); 

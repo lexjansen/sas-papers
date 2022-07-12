@@ -74,6 +74,8 @@
     WRITE VALUES "label" "&dataset_label";
 
     WRITE VALUE "items";
+    %* Use macro to avoid creating null values for missing attributes;
+    %* Instead do not create the attribute;
     %write_json_metadata_array(work.column_metadata);
     WRITE CLOSE;
 
