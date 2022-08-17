@@ -7,7 +7,7 @@
 %macro process(jsonfile, model);
 
 %local _clinicalreferencedata_ _items_ _itemdata_ _itemgroupdata_ dslabel dsname
-       rename label length format;
+       variables rename label length format;
 
 libname data "&root/data/&model";
 libname dataout "&root/data_out/&model";
@@ -44,6 +44,8 @@ data _null_;
 run;
 
 proc sql noprint;
+  select name into :variables separated by ' '
+    from out.&_items_;
   select cats("element", monotonic(), '=', name) into :rename separated by ' '
     from out.&_items_;
   select cats(name, '=', quote(strip(label))) into :label separated by ' '
@@ -52,6 +54,11 @@ proc sql noprint;
     from out.&_items_
     where type="string" and (not(missing(length)));
 quit;
+
+%put &=variables;
+%put &=rename;
+%put &=label;
+%put &=length;
 
 %let dslabel=;
 %let dsname=;
@@ -71,7 +78,7 @@ proc sql noprint;
   select catx(' ', name, strip(displayformat)) into :format separated by ' '
       from metadata.metadata_columns
       where upcase(dataset_name)="%upcase(&dsname)"
-      and not(missing(displayformat)) and (xml_datatype in ('integer' 'float'));
+      and not(missing(displayformat)) and (xml_datatype in ('integer' 'float' 'double' 'decimal'));
 quit;
 
 proc datasets library=dataout noprint nolist nodetails;
@@ -99,6 +106,7 @@ quit ;
 data dataout.&dsname(
     %if %sysevalf(%superq(dslabel)=, boolean)=0 %then %str(label = "%nrbquote(&dslabel)");
   );
+  retain &variables;
   length &length;
   set dataout.&dsname;
 run;
@@ -150,7 +158,6 @@ proc sql ;
   i.type,
   d.length as sas_length,
   i.length,
-  %if %utl_varexist(out.&_items_, fractionDigits) %then %do; i.fractionDigits, %end;
   d.format
  from dictionary.columns d,
       out.&_items_ i
