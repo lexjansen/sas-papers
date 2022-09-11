@@ -71,7 +71,7 @@
     WRITE OPEN OBJECT;
     WRITE VALUES "records" &records;
     WRITE VALUES "name" "%upcase(&dataset_name)";
-    WRITE VALUES "label" "&dataset_label";
+    WRITE VALUES "label" %sysfunc(quote(&dataset_label));
 
     WRITE VALUE "items";
     %* Use macro to avoid creating null values for missing attributes;

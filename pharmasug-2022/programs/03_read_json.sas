@@ -84,7 +84,7 @@ quit;
 proc datasets library=dataout noprint nolist nodetails;
   delete &dsname;
   change &_itemdata_ = &dsname;
-  modify &dsname %if %sysevalf(%superq(dslabel)=, boolean)=0 %then %str((label = "%nrbquote(&dslabel)"));;
+  modify &dsname %if %sysevalf(%superq(dslabel)=, boolean)=0 %then %str((label = %sysfunc(quote(%nrbquote(&dslabel)))));;
     rename &rename;
     label &label;
     %if %sysevalf(%superq(format)=, boolean)=0 %then format &format;;
@@ -104,7 +104,7 @@ proc sql noprint;
 quit ;
 
 data dataout.&dsname(
-    %if %sysevalf(%superq(dslabel)=, boolean)=0 %then %str(label = "%nrbquote(&dslabel)");
+    %if %sysevalf(%superq(dslabel)=, boolean)=0 %then %str(label = %sysfunc(quote(%nrbquote(&dslabel))));
   );
   retain &variables;
   length &length;
