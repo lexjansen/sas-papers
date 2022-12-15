@@ -1,5 +1,7 @@
 # PharmaSUG 2022
 
+**2022-12-15 UPDATE: an improved version of this code can be found in the following GitHub repository: [https://github.com/lexjansen/dataset-json-sas](https://github.com/lexjansen/dataset-json-sas)**
+
 This repository contains all code and examples from the paper Working with Dataset-JSON using SAS©
 Presented at PharmaSUG 2022, May 22 - 25
 
