@@ -1,6 +1,7 @@
 # sas-papers
-Papers presented at conferences:
+Papers and code presented at conferences:
 
+- [Working with Biomedical Concepts and SDTM Dataset Specializations for Define-XML using SAS© Open CST](https://github.com/lexjansen/sas-papers/tree/master/pharmasug-2023) (PharmaSUG 2023)
 
 - [Working with Dataset-JSON using SAS©](https://github.com/lexjansen/sas-papers/tree/master/pharmasug-2022) (PharmaSUG 2022)
 
