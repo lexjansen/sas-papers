@@ -8,7 +8,7 @@
 *
 * Parameters: (if applicable)
 * 1. config_file(Required) - specify the configuration filepath
-* 2. sections(Optional) - sections to use, example: %str("lsaf.lsaftell" "box")
+* 2. sections(Optional) - sections to use, example: %str("cdisclibrary" "box")
 * 3. symboltable(Required) - macro variable symbol table (g/l/f, default:g)
 *
 * Dependencies/Assumptions:
