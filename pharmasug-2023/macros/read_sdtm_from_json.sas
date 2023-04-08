@@ -1,4 +1,4 @@
-%macro read_sdtm_from_json(json_path=, jsonlib=, maplib=work, template=, out=, include_package_dates=0);
+%macro read_sdtm_from_json(json_path=, jsonlib=, maplib=work, template=, out=);
 
   proc datasets library=&jsonlib kill nolist;
   quit;
@@ -6,7 +6,7 @@
   filename jsonfile "&json_path";
   filename mapfile "%sysfunc(pathname(&maplib))/specialization.map";
 
-  libname jsonfile json map=mapfile automap=create fileref=jsonfile /* noalldata ordinalcount=none */;
+  libname jsonfile json map=mapfile automap=create fileref=jsonfile;
   proc copy in=jsonfile out=&jsonlib;
   run;
 
@@ -57,6 +57,7 @@
       %if %sysfunc(exist(&jsonlib..variables)) %then %do;    
         , var.ordinal_variables
         , var.name
+        , var.ordinal_variables as order
         /* , var.dataElementConceptId */
         , var.isNonStandard
         , var.subsetCodelist
@@ -76,7 +77,7 @@
       %if %sysfunc(exist(&jsonlib..variables_codelist)) %then %do;    
         , varcl.conceptId as codelist
         , varcl.href as codelist_href
-        , varcl.submissionValue as codelist_submision_value
+        , varcl.submissionValue as codelist_submission_value
       %end;
        
       %if %sysfunc(exist(&jsonlib..variables_valuelist)) %then %do;    

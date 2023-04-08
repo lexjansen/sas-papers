@@ -4,16 +4,11 @@
   quit;
 
   filename jsonfile "&json_path";
-  filename mapfile "%sysfunc(pathname(&maplib))/bc_&bc..map";
+  filename mapfile "%sysfunc(pathname(&maplib))/bc.map";
 
-  libname jsonfile json map=mapfile automap=create fileref=jsonfile /* noalldata ordinalcount=none */;
+  libname jsonfile json map=mapfile automap=create fileref=jsonfile;
   proc copy in=jsonfile out=&jsonlib;
   run;
-
-  %if &SYSERR %then %do;
-    %put ### &_package - &bc;
-    %goto exit_get_json;
-  %end;
 
   data work.root;
     set &template &jsonlib..root;
@@ -101,6 +96,7 @@
       %end;  
       %if %sysfunc(exist(&jsonlib..dataelementconcepts)) %then %do;
         , dec.conceptId as dec_conceptId
+        , dec.ordinal_dataelementconcepts as order
         , dec.href as dec_href
         , dec.shortName as dec_shortName
         , dec.dataType as dec_dataType
@@ -149,11 +145,6 @@
   data &out;
     set &template &out;
   run;   
-
-  %****************************;
-  %*  Handle any errors here  *;
-  %****************************;
-  %exit_get_json:
 
   filename jsonfile clear;
   filename mapfile clear;
