@@ -1,0 +1,2316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SXLEMAP name="DEFINEXML200" version="1.2">
+
+<TABLE name="Aliases">
+   <TABLE-PATH syntax="XPath">/LIBRARY/Aliases</TABLE-PATH>
+   <TABLE-DESCRIPTION>Alias information for item</TABLE-DESCRIPTION>
+
+   <COLUMN name="Context">
+     <PATH syntax="Xpath">/LIBRARY/Aliases/Context</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Application domain in which alias is relevant</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="Name">
+     <PATH syntax="Xpath">/LIBRARY/Aliases/Name</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Additional name</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="parent">
+     <PATH syntax="Xpath">/LIBRARY/Aliases/parent</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Parent table containing reference OID (e.g. MetaDataVersion)</DESCRIPTION>
+     <LENGTH>32</LENGTH>
+   </COLUMN>
+   <COLUMN name="parentKey">
+     <PATH syntax="Xpath">/LIBRARY/Aliases/parentKey</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Key to table as defined in parent column</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="AnalysisDataset">
+   <TABLE-PATH syntax="XPath">/LIBRARY/AnalysisDataset</TABLE-PATH>
+   <TABLE-DESCRIPTION>Analysis Datasets</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisDataset/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier of the analysis dataset</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="ItemGroupOID">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisDataset/ItemGroupOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ItemGroupDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_AnalysisDatasets">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisDataset/FK_AnalysisDatasets</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: AnalysisDatasets.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="AnalysisDatasets">
+   <TABLE-PATH syntax="XPath">/LIBRARY/AnalysisDatasets</TABLE-PATH>
+   <TABLE-DESCRIPTION>Analysis Datasets</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisDatasets/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier of the analysis datasets</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="CommentOID">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisDatasets/CommentOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: CommentDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_AnalysisResults">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisDatasets/FK_AnalysisResults</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: AnalysisResults.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="AnalysisDocumentation">
+   <TABLE-PATH syntax="XPath">/LIBRARY/AnalysisDocumentation</TABLE-PATH>
+   <TABLE-DESCRIPTION>Analysis Documentation</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisDocumentation/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier of the analysis documentation</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_AnalysisResults">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisDocumentation/FK_AnalysisResults</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: AnalysisResults.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="AnalysisProgrammingCode">
+   <TABLE-PATH syntax="XPath">/LIBRARY/AnalysisProgrammingCode</TABLE-PATH>
+   <TABLE-DESCRIPTION>Analysis Programming Code</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisProgrammingCode/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier of the analysis programming code</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Context">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisProgrammingCode/Context</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>The name and version of the computer language used for the actual programming statements provided.</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="Code">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisProgrammingCode/Code</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>The programming statements pertaining to the decribed analysis result</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_AnalysisResults">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisProgrammingCode/FK_AnalysisResults</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: AnalysisResults.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="AnalysisResultDisplays">
+   <TABLE-PATH syntax="XPath">/LIBRARY/AnalysisResultDisplays</TABLE-PATH>
+   <TABLE-DESCRIPTION>Analysis Result Displays</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisResultDisplays/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for the Analysis Result Display</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Name">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisResultDisplays/Name</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Name of Analysis Result Display</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_MetaDataVersion">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisResultDisplays/FK_MetaDataVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MetaDataVersion.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="AnalysisResults">
+   <TABLE-PATH syntax="XPath">/LIBRARY/AnalysisResults</TABLE-PATH>
+   <TABLE-DESCRIPTION>Analysis Results</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisResults/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier of the analysis result within a
+display</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="ParameterOID">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisResults/ParameterOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ItemDefs.OID (Analysis Parameter)</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="AnalysisReason">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisResults/AnalysisReason</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>The rationale for performing this analysis.</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="AnalysisPurpose">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisResults/AnalysisPurpose</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>The purpose of the analysis within the body of evidence (e.g., section in the clinical study report).</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_AnalysisResultDisplays">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisResults/FK_AnalysisResultDisplays</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: AnalysisResultDisplays.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="AnalysisVariables">
+   <TABLE-PATH syntax="XPath">/LIBRARY/AnalysisVariables</TABLE-PATH>
+   <TABLE-DESCRIPTION>Analysis Datasets Analysis Variables</TABLE-DESCRIPTION>
+
+   <COLUMN name="ItemOID">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisVariables/ItemOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ItemDefs.OID (Analysis variable)</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_AnalysisDataset">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisVariables/FK_AnalysisDataset</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: AnalysisDataset.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="AnalysisWhereClauseRefs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/AnalysisWhereClauseRefs</TABLE-PATH>
+   <TABLE-DESCRIPTION>WhereClause associated with the Analysis</TABLE-DESCRIPTION>
+
+   <COLUMN name="WhereClauseOID">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisWhereClauseRefs/WhereClauseOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: WhereClauseDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_AnalysisDataset">
+     <PATH syntax="Xpath">/LIBRARY/AnalysisWhereClauseRefs/FK_AnalysisDataset</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: AnalysisDataset.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="AnnotatedCRFs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/AnnotatedCRFs</TABLE-PATH>
+   <TABLE-DESCRIPTION>Annotated CRF metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="leafID">
+     <PATH syntax="Xpath">/LIBRARY/AnnotatedCRFs/leafID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>The unique ID of the referenced Annotated CRF</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_MetaDataVersion">
+     <PATH syntax="Xpath">/LIBRARY/AnnotatedCRFs/FK_MetaDataVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MetaDataVersion.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="CodeListItems">
+   <TABLE-PATH syntax="XPath">/LIBRARY/CodeListItems</TABLE-PATH>
+   <TABLE-DESCRIPTION>Coded codelist values</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/CodeListItems/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this codelist item</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="CodedValue">
+     <PATH syntax="Xpath">/LIBRARY/CodeListItems/CodedValue</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Value of the codelist item</DESCRIPTION>
+     <LENGTH>512</LENGTH>
+   </COLUMN>
+   <COLUMN name="Rank">
+     <PATH syntax="Xpath">/LIBRARY/CodeListItems/Rank</PATH>
+     <TYPE>numeric</TYPE>
+     <DATATYPE>numeric</DATATYPE>
+     <DESCRIPTION>CodedValue order relative to other coded item values</DESCRIPTION>
+     <LENGTH>8</LENGTH>
+   </COLUMN>
+   <COLUMN name="OrderNumber">
+     <PATH syntax="Xpath">/LIBRARY/CodeListItems/OrderNumber</PATH>
+     <TYPE>numeric</TYPE>
+     <DATATYPE>numeric</DATATYPE>
+     <DESCRIPTION>Display order of the item within the CodeList.</DESCRIPTION>
+     <LENGTH>8</LENGTH>
+   </COLUMN>
+   <COLUMN name="ExtendedValue">
+     <PATH syntax="Xpath">/LIBRARY/CodeListItems/ExtendedValue</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Indicates a coded value that has been used to extend external controlled terminology</DESCRIPTION>
+     <LENGTH>3</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_CodeLists">
+     <PATH syntax="Xpath">/LIBRARY/CodeListItems/FK_CodeLists</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: CodeLists.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="CodeLists">
+   <TABLE-PATH syntax="XPath">/LIBRARY/CodeLists</TABLE-PATH>
+   <TABLE-DESCRIPTION>Codelist metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/CodeLists/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this codelist</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Name">
+     <PATH syntax="Xpath">/LIBRARY/CodeLists/Name</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>CodeList name</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="DataType">
+     <PATH syntax="Xpath">/LIBRARY/CodeLists/DataType</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>CodeList item value data type (integer | float | text | string)</DESCRIPTION>
+     <LENGTH>7</LENGTH>
+   </COLUMN>
+   <COLUMN name="SASFormatName">
+     <PATH syntax="Xpath">/LIBRARY/CodeLists/SASFormatName</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>SAS format name</DESCRIPTION>
+     <LENGTH>8</LENGTH>
+   </COLUMN>
+   <COLUMN name="CommentOID">
+     <PATH syntax="Xpath">/LIBRARY/CodeLists/CommentOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: CommentDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="StandardOID">
+     <PATH syntax="Xpath">/LIBRARY/CodeLists/StandardOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: Standards.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="IsNonStandard">
+     <PATH syntax="Xpath">/LIBRARY/CodeLists/IsNonStandard</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>CodeList is non-standard?</DESCRIPTION>
+     <LENGTH>3</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_MetaDataVersion">
+     <PATH syntax="Xpath">/LIBRARY/CodeLists/FK_MetaDataVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MetaDataVersion.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="CommentDefs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/CommentDefs</TABLE-PATH>
+   <TABLE-DESCRIPTION>Comment metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/CommentDefs/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this comment</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_MetaDataVersion">
+     <PATH syntax="Xpath">/LIBRARY/CommentDefs/FK_MetaDataVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MetaDataVersion.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ConditionDefs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ConditionDefs</TABLE-PATH>
+   <TABLE-DESCRIPTION>Conditions when data not collected</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/ConditionDefs/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this condition</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Name">
+     <PATH syntax="Xpath">/LIBRARY/ConditionDefs/Name</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Condition name</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_MetaDataVersion">
+     <PATH syntax="Xpath">/LIBRARY/ConditionDefs/FK_MetaDataVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MetaDataVersion.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="DefineDocument">
+   <TABLE-PATH syntax="XPath">/LIBRARY/DefineDocument</TABLE-PATH>
+   <TABLE-DESCRIPTION>ODM file information</TABLE-DESCRIPTION>
+
+   <COLUMN name="FileOID">
+     <PATH syntax="Xpath">/LIBRARY/DefineDocument/FileOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this file</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Archival">
+     <PATH syntax="Xpath">/LIBRARY/DefineDocument/Archival</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>File meets requirements of an electronic record</DESCRIPTION>
+     <LENGTH>3</LENGTH>
+   </COLUMN>
+   <COLUMN name="AsOfDateTime">
+     <PATH syntax="Xpath">/LIBRARY/DefineDocument/AsOfDateTime</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Datetime source database queried to create this document</DESCRIPTION>
+     <LENGTH>32</LENGTH>
+   </COLUMN>
+   <COLUMN name="CreationDateTime">
+     <PATH syntax="Xpath">/LIBRARY/DefineDocument/CreationDateTime</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Time of creation of the file containing the document</DESCRIPTION>
+     <LENGTH>32</LENGTH>
+   </COLUMN>
+   <COLUMN name="Description">
+     <PATH syntax="Xpath">/LIBRARY/DefineDocument/Description</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>File description</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="FileType">
+     <PATH syntax="Xpath">/LIBRARY/DefineDocument/FileType</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>File type (Snapshot | Transactional)</DESCRIPTION>
+     <LENGTH>13</LENGTH>
+   </COLUMN>
+   <COLUMN name="Granularity">
+     <PATH syntax="Xpath">/LIBRARY/DefineDocument/Granularity</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Breadth of  information contained in file</DESCRIPTION>
+     <LENGTH>15</LENGTH>
+   </COLUMN>
+   <COLUMN name="Id">
+     <PATH syntax="Xpath">/LIBRARY/DefineDocument/Id</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Reference ID used by the ds:Signature element</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="ODMVersion">
+     <PATH syntax="Xpath">/LIBRARY/DefineDocument/ODMVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Version of the ODM standard used</DESCRIPTION>
+     <LENGTH>32</LENGTH>
+   </COLUMN>
+   <COLUMN name="Originator">
+     <PATH syntax="Xpath">/LIBRARY/DefineDocument/Originator</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Organization that generated the ODM file</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="PriorFileOID">
+     <PATH syntax="Xpath">/LIBRARY/DefineDocument/PriorFileOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Reference to the previous file (if any) in a series</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="SourceSystem">
+     <PATH syntax="Xpath">/LIBRARY/DefineDocument/SourceSystem</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>The source system or database for this file</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="SourceSystemVersion">
+     <PATH syntax="Xpath">/LIBRARY/DefineDocument/SourceSystemVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Version of the SourceSystem</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="Context">
+     <PATH syntax="Xpath">/LIBRARY/DefineDocument/Context</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Context in which the Define-XML document is used</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="DocumentRefs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/DocumentRefs</TABLE-PATH>
+   <TABLE-DESCRIPTION>Document reference metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/DocumentRefs/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique document reference identifier</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="leafID">
+     <PATH syntax="Xpath">/LIBRARY/DocumentRefs/leafID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>The unique ID of the referenced document leaf</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="parent">
+     <PATH syntax="Xpath">/LIBRARY/DocumentRefs/parent</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Parent table containing reference OID (e.g. MetaDataVersion)</DESCRIPTION>
+     <LENGTH>32</LENGTH>
+   </COLUMN>
+   <COLUMN name="parentKey">
+     <PATH syntax="Xpath">/LIBRARY/DocumentRefs/parentKey</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Key to table as defined in parent column</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="EnumeratedItems">
+   <TABLE-PATH syntax="XPath">/LIBRARY/EnumeratedItems</TABLE-PATH>
+   <TABLE-DESCRIPTION>Enumerated codelist items</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/EnumeratedItems/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this enumerated item</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="CodedValue">
+     <PATH syntax="Xpath">/LIBRARY/EnumeratedItems/CodedValue</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Text of the enumerated item</DESCRIPTION>
+     <LENGTH>512</LENGTH>
+   </COLUMN>
+   <COLUMN name="Rank">
+     <PATH syntax="Xpath">/LIBRARY/EnumeratedItems/Rank</PATH>
+     <TYPE>numeric</TYPE>
+     <DATATYPE>numeric</DATATYPE>
+     <DESCRIPTION>CodedValue order relative to other enumerated item values</DESCRIPTION>
+     <LENGTH>8</LENGTH>
+   </COLUMN>
+   <COLUMN name="OrderNumber">
+     <PATH syntax="Xpath">/LIBRARY/EnumeratedItems/OrderNumber</PATH>
+     <TYPE>numeric</TYPE>
+     <DATATYPE>numeric</DATATYPE>
+     <DESCRIPTION>Display order of the item within the CodeList.</DESCRIPTION>
+     <LENGTH>8</LENGTH>
+   </COLUMN>
+   <COLUMN name="ExtendedValue">
+     <PATH syntax="Xpath">/LIBRARY/EnumeratedItems/ExtendedValue</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Indicates a coded value that has been used to extend external controlled terminology</DESCRIPTION>
+     <LENGTH>3</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_CodeLists">
+     <PATH syntax="Xpath">/LIBRARY/EnumeratedItems/FK_CodeLists</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: CodeLists.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ExternalCodeLists">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ExternalCodeLists</TABLE-PATH>
+   <TABLE-DESCRIPTION>External codelist metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="Dictionary">
+     <PATH syntax="Xpath">/LIBRARY/ExternalCodeLists/Dictionary</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Name of the external codelist</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="Version">
+     <PATH syntax="Xpath">/LIBRARY/ExternalCodeLists/Version</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Version designator of the external codelist</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="ref">
+     <PATH syntax="Xpath">/LIBRARY/ExternalCodeLists/ref</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Reference to a local instance of the dictionary</DESCRIPTION>
+     <LENGTH>512</LENGTH>
+   </COLUMN>
+   <COLUMN name="href">
+     <PATH syntax="Xpath">/LIBRARY/ExternalCodeLists/href</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>URL of an external instance of the dictionary</DESCRIPTION>
+     <LENGTH>512</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_CodeLists">
+     <PATH syntax="Xpath">/LIBRARY/ExternalCodeLists/FK_CodeLists</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: CodeLists.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="FormalExpressions">
+   <TABLE-PATH syntax="XPath">/LIBRARY/FormalExpressions</TABLE-PATH>
+   <TABLE-DESCRIPTION>Formal expressions</TABLE-DESCRIPTION>
+
+   <COLUMN name="Expression">
+     <PATH syntax="Xpath">/LIBRARY/FormalExpressions/Expression</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>An expression  that evaluates to true or false</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="Context">
+     <PATH syntax="Xpath">/LIBRARY/FormalExpressions/Context</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Appropriate computer language to evaluate Expression</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="parent">
+     <PATH syntax="Xpath">/LIBRARY/FormalExpressions/parent</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Parent table containing reference OID (e.g. MetaDataVersion)</DESCRIPTION>
+     <LENGTH>32</LENGTH>
+   </COLUMN>
+   <COLUMN name="parentKey">
+     <PATH syntax="Xpath">/LIBRARY/FormalExpressions/parentKey</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Key to table as defined in parent column</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="FormArchLayouts">
+   <TABLE-PATH syntax="XPath">/LIBRARY/FormArchLayouts</TABLE-PATH>
+   <TABLE-DESCRIPTION>Archive layout of form</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/FormArchLayouts/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for the screen layout used for the form</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="PdfFileName">
+     <PATH syntax="Xpath">/LIBRARY/FormArchLayouts/PdfFileName</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>PDF file name containing the screen layout</DESCRIPTION>
+     <LENGTH>512</LENGTH>
+   </COLUMN>
+   <COLUMN name="PresentationOID">
+     <PATH syntax="Xpath">/LIBRARY/FormArchLayouts/PresentationOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: Presentation.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_FormDefs">
+     <PATH syntax="Xpath">/LIBRARY/FormArchLayouts/FK_FormDefs</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: FormDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="FormDefs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/FormDefs</TABLE-PATH>
+   <TABLE-DESCRIPTION>Form metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/FormDefs/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this form</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Name">
+     <PATH syntax="Xpath">/LIBRARY/FormDefs/Name</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Form name</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Repeating">
+     <PATH syntax="Xpath">/LIBRARY/FormDefs/Repeating</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Can form occur repeatedly within the containing study event?</DESCRIPTION>
+     <LENGTH>3</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_MetaDataVersion">
+     <PATH syntax="Xpath">/LIBRARY/FormDefs/FK_MetaDataVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MetaDataVersion.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="FormItemGroupRefs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/FormItemGroupRefs</TABLE-PATH>
+   <TABLE-DESCRIPTION>Set of item groups for each form</TABLE-DESCRIPTION>
+
+   <COLUMN name="ItemGroupOID">
+     <PATH syntax="Xpath">/LIBRARY/FormItemGroupRefs/ItemGroupOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ItemGroupDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Mandatory">
+     <PATH syntax="Xpath">/LIBRARY/FormItemGroupRefs/Mandatory</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Is an instance of this item group mandatory?</DESCRIPTION>
+     <LENGTH>3</LENGTH>
+   </COLUMN>
+   <COLUMN name="OrderNumber">
+     <PATH syntax="Xpath">/LIBRARY/FormItemGroupRefs/OrderNumber</PATH>
+     <TYPE>numeric</TYPE>
+     <DATATYPE>numeric</DATATYPE>
+     <DESCRIPTION>ItemGroupDef order within the containing FormDef</DESCRIPTION>
+     <LENGTH>8</LENGTH>
+   </COLUMN>
+   <COLUMN name="CollectionExceptionConditionOID">
+     <PATH syntax="Xpath">/LIBRARY/FormItemGroupRefs/CollectionExceptionConditionOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ConditionDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_FormDefs">
+     <PATH syntax="Xpath">/LIBRARY/FormItemGroupRefs/FK_FormDefs</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: FormDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ImputationMethods">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ImputationMethods</TABLE-PATH>
+   <TABLE-DESCRIPTION>Value imputation information</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/ImputationMethods/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this imputation method</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="method">
+     <PATH syntax="Xpath">/LIBRARY/ImputationMethods/method</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Rule for deriving data value</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_MetaDataVersion">
+     <PATH syntax="Xpath">/LIBRARY/ImputationMethods/FK_MetaDataVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MetaDataVersion.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ItemDefs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ItemDefs</TABLE-PATH>
+   <TABLE-DESCRIPTION>Item metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/ItemDefs/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this item</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Name">
+     <PATH syntax="Xpath">/LIBRARY/ItemDefs/Name</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Item (variable) name</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="DataType">
+     <PATH syntax="Xpath">/LIBRARY/ItemDefs/DataType</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Item (variable) data type (text, integer, float)</DESCRIPTION>
+     <LENGTH>18</LENGTH>
+   </COLUMN>
+   <COLUMN name="Length">
+     <PATH syntax="Xpath">/LIBRARY/ItemDefs/Length</PATH>
+     <TYPE>numeric</TYPE>
+     <DATATYPE>numeric</DATATYPE>
+     <DESCRIPTION>Item (variable) length</DESCRIPTION>
+     <LENGTH>8</LENGTH>
+   </COLUMN>
+   <COLUMN name="SignificantDigits">
+     <PATH syntax="Xpath">/LIBRARY/ItemDefs/SignificantDigits</PATH>
+     <TYPE>numeric</TYPE>
+     <DATATYPE>numeric</DATATYPE>
+     <DESCRIPTION>Number of decimal digits float data type items</DESCRIPTION>
+     <LENGTH>8</LENGTH>
+   </COLUMN>
+   <COLUMN name="SASFieldName">
+     <PATH syntax="Xpath">/LIBRARY/ItemDefs/SASFieldName</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>SAS column name</DESCRIPTION>
+     <LENGTH>8</LENGTH>
+   </COLUMN>
+   <COLUMN name="SDSVarName">
+     <PATH syntax="Xpath">/LIBRARY/ItemDefs/SDSVarName</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Item (variable) name within the submission data standards</DESCRIPTION>
+     <LENGTH>8</LENGTH>
+   </COLUMN>
+   <COLUMN name="Origin">
+     <PATH syntax="Xpath">/LIBRARY/ItemDefs/Origin</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Source or point of origin for item</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="Comment">
+     <PATH syntax="Xpath">/LIBRARY/ItemDefs/Comment</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Free-form explanatory comment</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="CodeListRef">
+     <PATH syntax="Xpath">/LIBRARY/ItemDefs/CodeListRef</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: CodeLists.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="DisplayFormat">
+     <PATH syntax="Xpath">/LIBRARY/ItemDefs/DisplayFormat</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Display format for numeric variables</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="CommentOID">
+     <PATH syntax="Xpath">/LIBRARY/ItemDefs/CommentOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: CommentDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_MetaDataVersion">
+     <PATH syntax="Xpath">/LIBRARY/ItemDefs/FK_MetaDataVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MetaDataVersion.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ItemGroupClass">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ItemGroupClass</TABLE-PATH>
+   <TABLE-DESCRIPTION>item group class metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupClass/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this Class</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Name">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupClass/Name</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Class name</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_ItemGroupDefs">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupClass/FK_ItemGroupDefs</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ItemGroupDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ItemGroupClassSubClass">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ItemGroupClassSubClass</TABLE-PATH>
+   <TABLE-DESCRIPTION>item group subclass metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupClassSubClass/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this SubClass</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Name">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupClassSubClass/Name</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>SubClass name</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="ParentClass">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupClassSubClass/ParentClass</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Parent Class name</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_ItemGroupClass">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupClassSubClass/FK_ItemGroupClass</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ItemGroupClass.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ItemGroupDefs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ItemGroupDefs</TABLE-PATH>
+   <TABLE-DESCRIPTION>Item group metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupDefs/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this item group</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Name">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupDefs/Name</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Item group name</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Repeating">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupDefs/Repeating</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Can item group occur repeatedly within the containing form?</DESCRIPTION>
+     <LENGTH>3</LENGTH>
+   </COLUMN>
+   <COLUMN name="IsReferenceData">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupDefs/IsReferenceData</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Can item group occur only within a ReferenceData element?</DESCRIPTION>
+     <LENGTH>3</LENGTH>
+   </COLUMN>
+   <COLUMN name="SASDatasetName">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupDefs/SASDatasetName</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Name of the item group as a SAS data set</DESCRIPTION>
+     <LENGTH>8</LENGTH>
+   </COLUMN>
+   <COLUMN name="Domain">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupDefs/Domain</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Item group domain name or data type</DESCRIPTION>
+     <LENGTH>32</LENGTH>
+   </COLUMN>
+   <COLUMN name="Origin">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupDefs/Origin</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Source or point of origin for item group</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="Role">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupDefs/Role</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Synonym for Purpose (deprecated)</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Purpose">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupDefs/Purpose</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>The purpose (Tabulation | Analysis) of the data set</DESCRIPTION>
+     <LENGTH>20</LENGTH>
+   </COLUMN>
+   <COLUMN name="Comment">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupDefs/Comment</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Free-form explanatory comment</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="Structure">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupDefs/Structure</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Data domain structure</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="ArchiveLocationID">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupDefs/ArchiveLocationID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ItemGroupLeaf.ID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="CommentOID">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupDefs/CommentOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: CommentDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="StandardOID">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupDefs/StandardOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: Standards.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="IsNonStandard">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupDefs/IsNonStandard</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>ItemGroup is non-standard?</DESCRIPTION>
+     <LENGTH>3</LENGTH>
+   </COLUMN>
+   <COLUMN name="HasNoData">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupDefs/HasNoData</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>ItemGroup has no data?</DESCRIPTION>
+     <LENGTH>3</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_MetaDataVersion">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupDefs/FK_MetaDataVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MetaDataVersion.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ItemGroupItemRefs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ItemGroupItemRefs</TABLE-PATH>
+   <TABLE-DESCRIPTION>Set of items within each item group</TABLE-DESCRIPTION>
+
+   <COLUMN name="ItemOID">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupItemRefs/ItemOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ItemDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Mandatory">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupItemRefs/Mandatory</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Is an instance of this item mandatory?</DESCRIPTION>
+     <LENGTH>3</LENGTH>
+   </COLUMN>
+   <COLUMN name="OrderNumber">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupItemRefs/OrderNumber</PATH>
+     <TYPE>numeric</TYPE>
+     <DATATYPE>numeric</DATATYPE>
+     <DESCRIPTION>ItemDef order within the containing ItemGroupDef</DESCRIPTION>
+     <LENGTH>8</LENGTH>
+   </COLUMN>
+   <COLUMN name="KeySequence">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupItemRefs/KeySequence</PATH>
+     <TYPE>numeric</TYPE>
+     <DATATYPE>numeric</DATATYPE>
+     <DESCRIPTION>Key order for the enclosing item group</DESCRIPTION>
+     <LENGTH>8</LENGTH>
+   </COLUMN>
+   <COLUMN name="ImputationMethodOID">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupItemRefs/ImputationMethodOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ImputationMethods.OID (deprecated)</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="MethodOID">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupItemRefs/MethodOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MethodDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Role">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupItemRefs/Role</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Set of role names describing the use of this item</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="RoleCodeListOID">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupItemRefs/RoleCodeListOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: CodeLists.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="CollectionExceptionConditionOID">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupItemRefs/CollectionExceptionConditionOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ConditionDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="IsNonStandard">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupItemRefs/IsNonStandard</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Item is non-standard?</DESCRIPTION>
+     <LENGTH>3</LENGTH>
+   </COLUMN>
+   <COLUMN name="HasNoData">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupItemRefs/HasNoData</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Item has no data?</DESCRIPTION>
+     <LENGTH>3</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_ItemGroupDefs">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupItemRefs/FK_ItemGroupDefs</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ItemGroupDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ItemGroupLeaf">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ItemGroupLeaf</TABLE-PATH>
+   <TABLE-DESCRIPTION>Domain file link metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="ID">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupLeaf/ID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique leaf identifier referenced by ArchiveLocationID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="href">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupLeaf/href</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>The pathname and filename of the target dataset relative to the define.xml</DESCRIPTION>
+     <LENGTH>1024</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_ItemGroupDefs">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupLeaf/FK_ItemGroupDefs</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ItemGroupDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ItemGroupLeafTitles">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ItemGroupLeafTitles</TABLE-PATH>
+   <TABLE-DESCRIPTION>Domain leaf description</TABLE-DESCRIPTION>
+
+   <COLUMN name="title">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupLeafTitles/title</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Meaningful description, label, or location of the domain leaf</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_ItemGroupLeaf">
+     <PATH syntax="Xpath">/LIBRARY/ItemGroupLeafTitles/FK_ItemGroupLeaf</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ItemGroupLeaf.ID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ItemMURefs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ItemMURefs</TABLE-PATH>
+   <TABLE-DESCRIPTION>Item measurement units</TABLE-DESCRIPTION>
+
+   <COLUMN name="MeasurementUnitOID">
+     <PATH syntax="Xpath">/LIBRARY/ItemMURefs/MeasurementUnitOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MeasurementUnits.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_ItemDefs">
+     <PATH syntax="Xpath">/LIBRARY/ItemMURefs/FK_ItemDefs</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ItemDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ItemOrigin">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ItemOrigin</TABLE-PATH>
+   <TABLE-DESCRIPTION>Item origin metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/ItemOrigin/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this origin</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Type">
+     <PATH syntax="Xpath">/LIBRARY/ItemOrigin/Type</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Origin type</DESCRIPTION>
+     <LENGTH>40</LENGTH>
+   </COLUMN>
+   <COLUMN name="Source">
+     <PATH syntax="Xpath">/LIBRARY/ItemOrigin/Source</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Origindata source</DESCRIPTION>
+     <LENGTH>40</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_ItemDefs">
+     <PATH syntax="Xpath">/LIBRARY/ItemOrigin/FK_ItemDefs</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ItemDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ItemQuestionExternal">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ItemQuestionExternal</TABLE-PATH>
+   <TABLE-DESCRIPTION>External question information</TABLE-DESCRIPTION>
+
+   <COLUMN name="Dictionary">
+     <PATH syntax="Xpath">/LIBRARY/ItemQuestionExternal/Dictionary</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Name of the external question dictionary</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="Version">
+     <PATH syntax="Xpath">/LIBRARY/ItemQuestionExternal/Version</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Version designator of the external question dictionary</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="Code">
+     <PATH syntax="Xpath">/LIBRARY/ItemQuestionExternal/Code</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Code selecting the particular question within the external dictionary</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_ItemDefs">
+     <PATH syntax="Xpath">/LIBRARY/ItemQuestionExternal/FK_ItemDefs</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ItemDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ItemRangeChecks">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ItemRangeChecks</TABLE-PATH>
+   <TABLE-DESCRIPTION>Item range check metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/ItemRangeChecks/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this item range check</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Comparator">
+     <PATH syntax="Xpath">/LIBRARY/ItemRangeChecks/Comparator</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Comparison operator used to compare the item and value(s)</DESCRIPTION>
+     <LENGTH>5</LENGTH>
+   </COLUMN>
+   <COLUMN name="SoftHard">
+     <PATH syntax="Xpath">/LIBRARY/ItemRangeChecks/SoftHard</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Soft (produces warning) or Hard (value rejected) constraint</DESCRIPTION>
+     <LENGTH>4</LENGTH>
+   </COLUMN>
+   <COLUMN name="MURefOID">
+     <PATH syntax="Xpath">/LIBRARY/ItemRangeChecks/MURefOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MeasurementUnits.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_ItemDefs">
+     <PATH syntax="Xpath">/LIBRARY/ItemRangeChecks/FK_ItemDefs</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ItemDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ItemRangeCheckValues">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ItemRangeCheckValues</TABLE-PATH>
+   <TABLE-DESCRIPTION>Item range check comparison values</TABLE-DESCRIPTION>
+
+   <COLUMN name="CheckValue">
+     <PATH syntax="Xpath">/LIBRARY/ItemRangeCheckValues/CheckValue</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Comparison value used in a range check</DESCRIPTION>
+     <LENGTH>512</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_ItemRangeChecks">
+     <PATH syntax="Xpath">/LIBRARY/ItemRangeCheckValues/FK_ItemRangeChecks</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ItemRangeChecks.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ItemRefWhereClauseRefs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ItemRefWhereClauseRefs</TABLE-PATH>
+   <TABLE-DESCRIPTION>ValueList associated with the variable</TABLE-DESCRIPTION>
+
+   <COLUMN name="ValueListItemRefsOID">
+     <PATH syntax="Xpath">/LIBRARY/ItemRefWhereClauseRefs/ValueListItemRefsOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ValueListItemRefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_WhereClauseDefs">
+     <PATH syntax="Xpath">/LIBRARY/ItemRefWhereClauseRefs/FK_WhereClauseDefs</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: WhereClauseDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ItemRole">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ItemRole</TABLE-PATH>
+   <TABLE-DESCRIPTION>Role(s) for each item</TABLE-DESCRIPTION>
+
+   <COLUMN name="Name">
+     <PATH syntax="Xpath">/LIBRARY/ItemRole/Name</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Set of role names describing the use of the data item</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_ItemDefs">
+     <PATH syntax="Xpath">/LIBRARY/ItemRole/FK_ItemDefs</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ItemDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ItemValueListRefs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ItemValueListRefs</TABLE-PATH>
+   <TABLE-DESCRIPTION>ValueList associated with the variable</TABLE-DESCRIPTION>
+
+   <COLUMN name="ValueListOID">
+     <PATH syntax="Xpath">/LIBRARY/ItemValueListRefs/ValueListOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ValueList.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_ItemDefs">
+     <PATH syntax="Xpath">/LIBRARY/ItemValueListRefs/FK_ItemDefs</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ItemDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="MDVLeaf">
+   <TABLE-PATH syntax="XPath">/LIBRARY/MDVLeaf</TABLE-PATH>
+   <TABLE-DESCRIPTION>MDV referenced file link metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="ID">
+     <PATH syntax="Xpath">/LIBRARY/MDVLeaf/ID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique leaf identifier referenced by DocumentRef/@leafID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="href">
+     <PATH syntax="Xpath">/LIBRARY/MDVLeaf/href</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>The pathname and filename of the target dataset relative to the define.xml</DESCRIPTION>
+     <LENGTH>512</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_MetaDataVersion">
+     <PATH syntax="Xpath">/LIBRARY/MDVLeaf/FK_MetaDataVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MetaDataVersion.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="MDVLeafTitles">
+   <TABLE-PATH syntax="XPath">/LIBRARY/MDVLeafTitles</TABLE-PATH>
+   <TABLE-DESCRIPTION>MDV referenced file leaf description</TABLE-DESCRIPTION>
+
+   <COLUMN name="title">
+     <PATH syntax="Xpath">/LIBRARY/MDVLeafTitles/title</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Meaningful description, label, or location of the document leaf</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_MDVLeaf">
+     <PATH syntax="Xpath">/LIBRARY/MDVLeafTitles/FK_MDVLeaf</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MDVLeaf.ID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="MeasurementUnits">
+   <TABLE-PATH syntax="XPath">/LIBRARY/MeasurementUnits</TABLE-PATH>
+   <TABLE-DESCRIPTION>Measurement unit metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/MeasurementUnits/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this measurement unit</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Name">
+     <PATH syntax="Xpath">/LIBRARY/MeasurementUnits/Name</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Physical unit of measure for a data item or value</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_Study">
+     <PATH syntax="Xpath">/LIBRARY/MeasurementUnits/FK_Study</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: Study.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="MetaDataVersion">
+   <TABLE-PATH syntax="XPath">/LIBRARY/MetaDataVersion</TABLE-PATH>
+   <TABLE-DESCRIPTION>Metadata version information</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/MetaDataVersion/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this metadata version</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Name">
+     <PATH syntax="Xpath">/LIBRARY/MetaDataVersion/Name</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Name of this metadata version</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Description">
+     <PATH syntax="Xpath">/LIBRARY/MetaDataVersion/Description</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Description of this metadata version</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="IncludedOID">
+     <PATH syntax="Xpath">/LIBRARY/MetaDataVersion/IncludedOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Reference to a prior metadata version</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="IncludedStudyOID">
+     <PATH syntax="Xpath">/LIBRARY/MetaDataVersion/IncludedStudyOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Reference to the study that provides a prior metadata version</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="DefineVersion">
+     <PATH syntax="Xpath">/LIBRARY/MetaDataVersion/DefineVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Version of Define-XML that the file conforms to</DESCRIPTION>
+     <LENGTH>32</LENGTH>
+   </COLUMN>
+   <COLUMN name="CommentOID">
+     <PATH syntax="Xpath">/LIBRARY/MetaDataVersion/CommentOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: CommentDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_Study">
+     <PATH syntax="Xpath">/LIBRARY/MetaDataVersion/FK_Study</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: Study.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="MethodDefs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/MethodDefs</TABLE-PATH>
+   <TABLE-DESCRIPTION>Item value derivation method information</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/MethodDefs/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this method</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Name">
+     <PATH syntax="Xpath">/LIBRARY/MethodDefs/Name</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Name of method</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Type">
+     <PATH syntax="Xpath">/LIBRARY/MethodDefs/Type</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Method type (Computation| Imputation| Transpose | Other)</DESCRIPTION>
+     <LENGTH>11</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_MetaDataVersion">
+     <PATH syntax="Xpath">/LIBRARY/MethodDefs/FK_MetaDataVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MetaDataVersion.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="PDFPageRefs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/PDFPageRefs</TABLE-PATH>
+   <TABLE-DESCRIPTION>PDF page reference metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="PageRefs">
+     <PATH syntax="Xpath">/LIBRARY/PDFPageRefs/PageRefs</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>List of PDF pages space delimited</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="FirstPage">
+     <PATH syntax="Xpath">/LIBRARY/PDFPageRefs/FirstPage</PATH>
+     <TYPE>numeric</TYPE>
+     <DATATYPE>numeric</DATATYPE>
+     <DESCRIPTION>First page in a range of pages</DESCRIPTION>
+     <LENGTH>8</LENGTH>
+   </COLUMN>
+   <COLUMN name="LastPage">
+     <PATH syntax="Xpath">/LIBRARY/PDFPageRefs/LastPage</PATH>
+     <TYPE>numeric</TYPE>
+     <DATATYPE>numeric</DATATYPE>
+     <DESCRIPTION>Last page in a range of pages</DESCRIPTION>
+     <LENGTH>8</LENGTH>
+   </COLUMN>
+   <COLUMN name="Type">
+     <PATH syntax="Xpath">/LIBRARY/PDFPageRefs/Type</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Type of page</DESCRIPTION>
+     <LENGTH>16</LENGTH>
+   </COLUMN>
+   <COLUMN name="Title">
+     <PATH syntax="Xpath">/LIBRARY/PDFPageRefs/Title</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Text with the label for the document reference</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_DocumentRefs">
+     <PATH syntax="Xpath">/LIBRARY/PDFPageRefs/FK_DocumentRefs</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: DocumentRefs.leafID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="Presentation">
+   <TABLE-PATH syntax="XPath">/LIBRARY/Presentation</TABLE-PATH>
+   <TABLE-DESCRIPTION>Presentation metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/Presentation/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique presentation identifier</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="presentation">
+     <PATH syntax="Xpath">/LIBRARY/Presentation/presentation</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Defines how information about the study is presented</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="lang">
+     <PATH syntax="Xpath">/LIBRARY/Presentation/lang</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Natural language or country-specific language variant</DESCRIPTION>
+     <LENGTH>17</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_MetaDataVersion">
+     <PATH syntax="Xpath">/LIBRARY/Presentation/FK_MetaDataVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MetaDataVersion.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ProtocolEventRefs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ProtocolEventRefs</TABLE-PATH>
+   <TABLE-DESCRIPTION>Study events for this protocol</TABLE-DESCRIPTION>
+
+   <COLUMN name="Mandatory">
+     <PATH syntax="Xpath">/LIBRARY/ProtocolEventRefs/Mandatory</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Is an instance of this type of study event mandatory?</DESCRIPTION>
+     <LENGTH>3</LENGTH>
+   </COLUMN>
+   <COLUMN name="OrderNumber">
+     <PATH syntax="Xpath">/LIBRARY/ProtocolEventRefs/OrderNumber</PATH>
+     <TYPE>numeric</TYPE>
+     <DATATYPE>numeric</DATATYPE>
+     <DESCRIPTION>Ordering of the study events</DESCRIPTION>
+     <LENGTH>8</LENGTH>
+   </COLUMN>
+   <COLUMN name="StudyEventOID">
+     <PATH syntax="Xpath">/LIBRARY/ProtocolEventRefs/StudyEventOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: StudyEventDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_MetaDataVersion">
+     <PATH syntax="Xpath">/LIBRARY/ProtocolEventRefs/FK_MetaDataVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MetaDataVersion.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="CollectionExceptionConditionOID">
+     <PATH syntax="Xpath">/LIBRARY/ProtocolEventRefs/CollectionExceptionConditionOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ConditionDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="Standards">
+   <TABLE-PATH syntax="XPath">/LIBRARY/Standards</TABLE-PATH>
+   <TABLE-DESCRIPTION>Definition of standards referenced in th</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/Standards/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>The unique ID of theStandard</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Name">
+     <PATH syntax="Xpath">/LIBRARY/Standards/Name</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Name of an external standard to which the data conforms</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="Type">
+     <PATH syntax="Xpath">/LIBRARY/Standards/Type</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Type of Standard</DESCRIPTION>
+     <LENGTH>20</LENGTH>
+   </COLUMN>
+   <COLUMN name="PublishingSet">
+     <PATH syntax="Xpath">/LIBRARY/Standards/PublishingSet</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Set of published files of Standard when Type="CT" (e.g. SDTM, ADaM, SEND, CDASH, COA)</DESCRIPTION>
+     <LENGTH>20</LENGTH>
+   </COLUMN>
+   <COLUMN name="Version">
+     <PATH syntax="Xpath">/LIBRARY/Standards/Version</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Version of an external standard to which the data conforms</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="Status">
+     <PATH syntax="Xpath">/LIBRARY/Standards/Status</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Status of Standard</DESCRIPTION>
+     <LENGTH>20</LENGTH>
+   </COLUMN>
+   <COLUMN name="CommentOID">
+     <PATH syntax="Xpath">/LIBRARY/Standards/CommentOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: CommentDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_MetaDataVersion">
+     <PATH syntax="Xpath">/LIBRARY/Standards/FK_MetaDataVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MetaDataVersion.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="Study">
+   <TABLE-PATH syntax="XPath">/LIBRARY/Study</TABLE-PATH>
+   <TABLE-DESCRIPTION>Study description</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/Study/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this study</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="StudyName">
+     <PATH syntax="Xpath">/LIBRARY/Study/StudyName</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Short external name for the study</DESCRIPTION>
+     <LENGTH>512</LENGTH>
+   </COLUMN>
+   <COLUMN name="StudyDescription">
+     <PATH syntax="Xpath">/LIBRARY/Study/StudyDescription</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Description of the study</DESCRIPTION>
+     <LENGTH>2400</LENGTH>
+   </COLUMN>
+   <COLUMN name="ProtocolName">
+     <PATH syntax="Xpath">/LIBRARY/Study/ProtocolName</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Sponsors internal name for the protocol</DESCRIPTION>
+     <LENGTH>1200</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_DefineDocument">
+     <PATH syntax="Xpath">/LIBRARY/Study/FK_DefineDocument</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: DefineDocument.FileOID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="StudyEventDefs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/StudyEventDefs</TABLE-PATH>
+   <TABLE-DESCRIPTION>Study event metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/StudyEventDefs/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Uniquely identifies a study event within a study</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Category">
+     <PATH syntax="Xpath">/LIBRARY/StudyEventDefs/Category</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Study phase appropriate to this type of study event</DESCRIPTION>
+     <LENGTH>2000</LENGTH>
+   </COLUMN>
+   <COLUMN name="Name">
+     <PATH syntax="Xpath">/LIBRARY/StudyEventDefs/Name</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Study event name</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Repeating">
+     <PATH syntax="Xpath">/LIBRARY/StudyEventDefs/Repeating</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Can study event  occur repeatedly within the containing study?</DESCRIPTION>
+     <LENGTH>3</LENGTH>
+   </COLUMN>
+   <COLUMN name="Type">
+     <PATH syntax="Xpath">/LIBRARY/StudyEventDefs/Type</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Study event type (Scheduled | Unscheduled | Common)</DESCRIPTION>
+     <LENGTH>11</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_MetaDataVersion">
+     <PATH syntax="Xpath">/LIBRARY/StudyEventDefs/FK_MetaDataVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MetaDataVersion.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="StudyEventFormRefs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/StudyEventFormRefs</TABLE-PATH>
+   <TABLE-DESCRIPTION>Set of forms for each study event</TABLE-DESCRIPTION>
+
+   <COLUMN name="FormOID">
+     <PATH syntax="Xpath">/LIBRARY/StudyEventFormRefs/FormOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: FormDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Mandatory">
+     <PATH syntax="Xpath">/LIBRARY/StudyEventFormRefs/Mandatory</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Is an instance of this type of form mandatory?</DESCRIPTION>
+     <LENGTH>3</LENGTH>
+   </COLUMN>
+   <COLUMN name="OrderNumber">
+     <PATH syntax="Xpath">/LIBRARY/StudyEventFormRefs/OrderNumber</PATH>
+     <TYPE>numeric</TYPE>
+     <DATATYPE>numeric</DATATYPE>
+     <DESCRIPTION>FormDef order within the containing StudyEventDef</DESCRIPTION>
+     <LENGTH>8</LENGTH>
+   </COLUMN>
+   <COLUMN name="CollectionExceptionConditionOID">
+     <PATH syntax="Xpath">/LIBRARY/StudyEventFormRefs/CollectionExceptionConditionOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ConditionDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_StudyEventDefs">
+     <PATH syntax="Xpath">/LIBRARY/StudyEventFormRefs/FK_StudyEventDefs</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: StudyEventDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="SupplementalDocs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/SupplementalDocs</TABLE-PATH>
+   <TABLE-DESCRIPTION>Supplemental Document metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="leafID">
+     <PATH syntax="Xpath">/LIBRARY/SupplementalDocs/leafID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>The unique ID of the referenced Supplemental Document</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_MetaDataVersion">
+     <PATH syntax="Xpath">/LIBRARY/SupplementalDocs/FK_MetaDataVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MetaDataVersion.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="TranslatedText">
+   <TABLE-PATH syntax="XPath">/LIBRARY/TranslatedText</TABLE-PATH>
+   <TABLE-DESCRIPTION>Language-specific text</TABLE-DESCRIPTION>
+
+   <COLUMN name="TranslatedText">
+     <PATH syntax="Xpath">/LIBRARY/TranslatedText/TranslatedText</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Human-readable text appropriate for a particular language</DESCRIPTION>
+     <LENGTH>4000</LENGTH>
+   </COLUMN>
+   <COLUMN name="lang">
+     <PATH syntax="Xpath">/LIBRARY/TranslatedText/lang</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Natural language or country-specific language variant</DESCRIPTION>
+     <LENGTH>17</LENGTH>
+   </COLUMN>
+   <COLUMN name="parent">
+     <PATH syntax="Xpath">/LIBRARY/TranslatedText/parent</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Parent table containing reference OID (e.g. MetaDataVersion)</DESCRIPTION>
+     <LENGTH>32</LENGTH>
+   </COLUMN>
+   <COLUMN name="parentKey">
+     <PATH syntax="Xpath">/LIBRARY/TranslatedText/parentKey</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Key to table as defined in parent column</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ValueListItemRefs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ValueListItemRefs</TABLE-PATH>
+   <TABLE-DESCRIPTION>Set of items within each value list</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/ValueListItemRefs/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this value list item</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="ItemOID">
+     <PATH syntax="Xpath">/LIBRARY/ValueListItemRefs/ItemOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>The ID of the corresponding Item</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="OrderNumber">
+     <PATH syntax="Xpath">/LIBRARY/ValueListItemRefs/OrderNumber</PATH>
+     <TYPE>numeric</TYPE>
+     <DATATYPE>numeric</DATATYPE>
+     <DESCRIPTION>Ordering of the value list items</DESCRIPTION>
+     <LENGTH>8</LENGTH>
+   </COLUMN>
+   <COLUMN name="Mandatory">
+     <PATH syntax="Xpath">/LIBRARY/ValueListItemRefs/Mandatory</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Is an instance of this value list item mandatory?</DESCRIPTION>
+     <LENGTH>3</LENGTH>
+   </COLUMN>
+   <COLUMN name="KeySequence">
+     <PATH syntax="Xpath">/LIBRARY/ValueListItemRefs/KeySequence</PATH>
+     <TYPE>numeric</TYPE>
+     <DATATYPE>numeric</DATATYPE>
+     <DESCRIPTION>Key order for the enclosing value list</DESCRIPTION>
+     <LENGTH>8</LENGTH>
+   </COLUMN>
+   <COLUMN name="ImputationMethodOID">
+     <PATH syntax="Xpath">/LIBRARY/ValueListItemRefs/ImputationMethodOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ImputationMethods.OID (deprecated)</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="MethodOID">
+     <PATH syntax="Xpath">/LIBRARY/ValueListItemRefs/MethodOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MethodDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Role">
+     <PATH syntax="Xpath">/LIBRARY/ValueListItemRefs/Role</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Set of role names describing the use of this item</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="RoleCodeListOID">
+     <PATH syntax="Xpath">/LIBRARY/ValueListItemRefs/RoleCodeListOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: CodeLists.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="CollectionExceptionConditionOID">
+     <PATH syntax="Xpath">/LIBRARY/ValueListItemRefs/CollectionExceptionConditionOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ConditionDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="IsNonStandard">
+     <PATH syntax="Xpath">/LIBRARY/ValueListItemRefs/IsNonStandard</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Item is non-standard?</DESCRIPTION>
+     <LENGTH>3</LENGTH>
+   </COLUMN>
+   <COLUMN name="HasNoData">
+     <PATH syntax="Xpath">/LIBRARY/ValueListItemRefs/HasNoData</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Item has no data?</DESCRIPTION>
+     <LENGTH>3</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_ValueLists">
+     <PATH syntax="Xpath">/LIBRARY/ValueListItemRefs/FK_ValueLists</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ValueLists.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="ValueLists">
+   <TABLE-PATH syntax="XPath">/LIBRARY/ValueLists</TABLE-PATH>
+   <TABLE-DESCRIPTION>Value List metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/ValueLists/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>The unique ID of the Value List</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_MetaDataVersion">
+     <PATH syntax="Xpath">/LIBRARY/ValueLists/FK_MetaDataVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MetaDataVersion.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="WhereClauseDefs">
+   <TABLE-PATH syntax="XPath">/LIBRARY/WhereClauseDefs</TABLE-PATH>
+   <TABLE-DESCRIPTION>WhereClause definitions</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/WhereClauseDefs/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique ID for the WhereClauseDef</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="CommentOID">
+     <PATH syntax="Xpath">/LIBRARY/WhereClauseDefs/CommentOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: CommentDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_MetaDataVersion">
+     <PATH syntax="Xpath">/LIBRARY/WhereClauseDefs/FK_MetaDataVersion</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: MetaDataVersion.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="WhereClauseRangeChecks">
+   <TABLE-PATH syntax="XPath">/LIBRARY/WhereClauseRangeChecks</TABLE-PATH>
+   <TABLE-DESCRIPTION>WhereClause range check metadata</TABLE-DESCRIPTION>
+
+   <COLUMN name="OID">
+     <PATH syntax="Xpath">/LIBRARY/WhereClauseRangeChecks/OID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Unique identifier for this WhereClause range check</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="Comparator">
+     <PATH syntax="Xpath">/LIBRARY/WhereClauseRangeChecks/Comparator</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Comparison operator used to compare the item and value(s)</DESCRIPTION>
+     <LENGTH>5</LENGTH>
+   </COLUMN>
+   <COLUMN name="SoftHard">
+     <PATH syntax="Xpath">/LIBRARY/WhereClauseRangeChecks/SoftHard</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Soft (produces warning) or Hard (value rejected) constraint</DESCRIPTION>
+     <LENGTH>4</LENGTH>
+   </COLUMN>
+   <COLUMN name="ItemOID">
+     <PATH syntax="Xpath">/LIBRARY/WhereClauseRangeChecks/ItemOID</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: ItemDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_WhereClauseDefs">
+     <PATH syntax="Xpath">/LIBRARY/WhereClauseRangeChecks/FK_WhereClauseDefs</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: WhereClauseDefs.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+<TABLE name="WhereClauseRangeCheckValues">
+   <TABLE-PATH syntax="XPath">/LIBRARY/WhereClauseRangeCheckValues</TABLE-PATH>
+   <TABLE-DESCRIPTION>WhereClause range check comparison value</TABLE-DESCRIPTION>
+
+   <COLUMN name="CheckValue">
+     <PATH syntax="Xpath">/LIBRARY/WhereClauseRangeCheckValues/CheckValue</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Comparison value used in a range check</DESCRIPTION>
+     <LENGTH>512</LENGTH>
+   </COLUMN>
+   <COLUMN name="FK_WhereClauseRangeChecks">
+     <PATH syntax="Xpath">/LIBRARY/WhereClauseRangeCheckValues/FK_WhereClauseRangeChecks</PATH>
+     <TYPE>character</TYPE>
+     <DATATYPE>character</DATATYPE>
+     <DESCRIPTION>Foreign key: WhereClauseRangeChecks.OID</DESCRIPTION>
+     <LENGTH>128</LENGTH>
+   </COLUMN>
+
+</TABLE>
+
+
+</SXLEMAP>

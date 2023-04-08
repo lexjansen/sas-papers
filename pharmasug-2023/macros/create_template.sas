@@ -19,6 +19,7 @@
          dec_conceptId char(64),
          dec_href char(1024),
          dec_shortName char(256),
+         order num,
          dec_dataType char(16),
          dec_exampleSet char(2048)
         );
@@ -41,10 +42,11 @@
          datasetSpecializationId char(64),
          shortName char(256),
          name char(32),
+         order num,
          isNonStandard num,
          codelist char(64),
          codelist_href char(1024),
-         codelist_submision_value char(32),
+         codelist_submission_value char(32),
          subsetCodelist char(32),
          value_list char(2048),
          assigned_term char(64),
