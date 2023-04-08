@@ -23,8 +23,8 @@
   libname jsonf json map=mpfile automap=create fileref=jsonf noalldata;
 
   %put %sysfunc(dcreate(jsontmp, %sysfunc(pathname(work))));
-  * libname jsontmp "%sysfunc(pathname(work))/jsontmp";
-  libname jsontmp "&project_folder/_temp/&domain";
+  libname jsontmp "%sysfunc(pathname(work))/jsontmp";
+  * libname jsontmp "&project_folder/_temp/&domain";
 
   proc datasets library=jsontmp kill nolist;
   quit;
