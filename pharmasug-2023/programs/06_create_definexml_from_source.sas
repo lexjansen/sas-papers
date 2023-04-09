@@ -171,6 +171,11 @@ run;
   _cstLang=en
   );
 
+data srcdata.metadataversion;
+  set srcdata.metadataversion;
+  DefineVersion = "2.1.5";
+run;  
+
 %define_write(
   _cstCreateDisplayStyleSheet=1,
   _cstHeaderComment=%str( Produced with SAS &sysver - SAS Open Clinical Standards Toolkit)
