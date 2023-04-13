@@ -1,0 +1,754 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<!--
+     xsl:version = "3.0"
+     xsl:vendor = "Saxonica"
+     xsl:vendor-url = "http://www.saxonica.com/"
+   -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>CDISCPILOT01: SDTMIG 3.3</title>
+<script type="text/javascript">
+<!--
+/**
+ * With one argument, return the textContent or innerText of the element.
+ * With two arguments, set the textContent or innerText of element to value.
+ */
+function textContent(element, value) {
+  "use strict";
+  var rtn;
+  var content = element.textContent;  // Check if textContent is defined
+  if (value === undefined) { // No value passed, so return current text
+    if (content !== undefined) {
+      rtn = content;
+    } else {
+      rtn = element.innerText;
+    }
+    return rtn;
+  }
+  else { // A value was passed, so set text
+    if (content !== undefined) {
+      element.textContent = value;
+    } else {
+      element.innerText = value;
+    }
+  }
+}
+
+var ITEM  = '\u00A0';
+var CLOSE = '\u25BA';
+var OPEN  = '\u25BC';
+
+function toggle_submenu(e) {
+  "use strict";
+  if (textContent(e)===OPEN) {
+    textContent(e, CLOSE);
+  }
+  else {
+    textContent(e, OPEN);
+  }
+
+  var i;
+  for (i=0; i < e.parentNode.childNodes.length; i++) {
+    var c;
+    c=e.parentNode.childNodes[i];
+    if (c.tagName==='UL') {c.style.display=(c.style.display==='none') ? 'block' : 'none';}
+   }
+}
+
+function reset_menus() {
+"use strict";
+  var li;
+  var c;
+  var i;
+  var j;
+  var li_tags = document.getElementsByTagName('LI');
+  for (i=0; i < li_tags.length; i++) {
+    li=li_tags[i];
+    if ( li.className.match('hmenu-item') ){
+      for (j=0; j < li.childNodes.length; j++) {
+        c=li.childNodes[j];
+        if ( c.tagName === 'SPAN' && c.className.match('hmenu-bullet') ) {textContent(c, ITEM);}
+        }
+      }
+    if ( li.className.match('hmenu-submenu') ) {
+      for (j=0; j < li.childNodes.length; j++) {
+        c=li.childNodes[j];
+        if ( c.tagName === 'SPAN' && c.className.match('hmenu-bullet') ) {textContent(c, CLOSE);}
+        else if ( c.tagName === 'UL' ) { c.style.display = 'none'; }
+        }
+    }
+  }
+}
+
+function toggle_vlm(element) {
+  var child_id = element.childNodes[0].getAttribute("id");
+  var vlm_rows = document.getElementsByClassName(child_id);
+  for (j=0; j < vlm_rows.length; j++) {
+    if (vlm_rows[j].style.display==='none') {
+      vlm_rows[j].style.display=''; }
+    else {
+      vlm_rows[j].style.display='none'; 
+      }
+    }
+}
+
+function expand_all_vlm() {
+  var vlm_rows = document.getElementsByClassName("vlm");
+  for (j=0; j < vlm_rows.length; j++) {
+      vlm_rows[j].style.display='';
+    }
+}
+
+function collapse_all_vlm() {
+  var vlm_rows = document.getElementsByClassName("vlm");
+  for (j=0; j < vlm_rows.length; j++) {
+      vlm_rows[j].style.display='none';
+    }
+}
+
+/**
+ * Open external documents (PDFs, ...) in a new window.
+ */
+document.onclick = function(e)
+{
+  var target = e ? e.target : window.event.srcElement;    
+  while (target && !/^(a|body)$/i.test(target.nodeName))
+  {
+    target = target.parentNode;
+  }
+
+  if (target && target.className.match('external'))
+  {
+    var external = window.open(target.href);
+    return external.closed;
+  }
+}
+//-->
+</script>
+  <style type="text/css">
+      .external-link-gif{
+        background: 
+        url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9gCGhErDWL4mOoAAAB6SURBVBjTbVCxDcAgDHNRP2KDY9gYO5YbWNno1mPY6E3pAJEIYCmCOCQOPogII6wNkug4d49KiXMz1EiUEg8uLBN3Ui7FVduYmxjG3JRru+facubVuIdLEV4Dzwe8V4BYg7t4Ap+d57qUnuWICBzi116v1ggfd3bM+AEZWXFvnym8EwAAAABJRU5ErkJggg==)
+       no-repeat
+       right center;
+        padding: 8px;
+      }      
+      
+      body{
+        background-color: #FFFFFF;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 62.5%;
+        margin: 0;
+        padding: 30px;
+      }
+      
+      h1{
+        font-size: 1.6em;
+        margin-left: 0;
+        font-weight: bolder;
+        text-align: left;
+        color: #696969;
+      }
+      
+      h1.header{
+        text-align: center;
+      }
+      
+      ul{
+        margin-left: 0px;
+      }
+      
+      a{
+      color: #0000FF;
+        text-decoration: underline;
+      }
+      a.visited{
+      color: #551A8B;
+        text-decoration: underline;
+      }
+      a:hover{
+      color: #FF9900;
+        text-decoration: underline;
+      }
+      a.tocItem{
+      color: #004A95;
+      text-decoration: none;
+      margin-top: 2px;
+      font-size: 1.4em;
+      }
+      .tocItem{
+      text-decoration: none;
+      margin-top: 2px;
+      font-size: 1.4em;
+      }
+      
+      #menu{
+        position: fixed;
+        left: 0px;
+        top: 10px;
+        width: 20%;
+        height: 96%;
+        bottom: 0px;
+        overflow: auto;
+        background-color: #FFFFFF;
+        color: #000000;
+        border: 0px;
+        text-align: left;
+        white-space: nowrap;
+      }
+ 
+      .hmenu li{
+        list-style-type: none;
+        line-height: 200%;
+        padding-left: 0;
+      }
+      .hmenu ul{
+        padding-left: 14px;
+        margin-left: 0;
+      }
+      .hmenu-item{
+      }
+      .hmenu-submenu{
+      }
+      .hmenu-bullet{
+        float: left;
+        width: 16px;
+        color: #AAAAAA;
+        font-size: 1.2em;
+      }
+      
+      div.buttons {
+        padding: 5px 0 5px 40px;
+        display: inline-block;
+      }
+        div.button {
+        padding: 5px 0 5px 0;   
+      }
+      
+      button { 
+        width: 100%;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: 3px 3px 2px #888;
+        -moz-box-shadow: 3px 3px 2px #888;
+        box-shadow: 3px 3px 2px #888;
+        padding: 4px 16px 4px 16px;
+        display:block;
+        cursor: pointer;
+      }
+
+      #main{
+        position: absolute;
+        left: 22%;
+        top: 0px;
+        overflow: auto;
+        background-color: #FFFFFF;
+        color: #000000;
+        float: none !important;
+      }
+      
+      ul.codelist{
+        padding: 1px;
+        margin-left: 1px;
+        margin-right: 1px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+        
+      }
+      .codelist li{
+        list-style-type:none;
+        line-height: 200%;
+        padding-left: 0;
+        text-indent: -4px;
+      }
+      
+      .codelist-caption{
+        font-size: 1.4em;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 0;
+        font-weight: bolder;
+        text-align: left;
+        color: #696969;
+      }
+      
+      .codelist-item{
+        list-style-type: disk;
+        list-style-position: inside;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0 0 0 0;
+        }
+
+      .codelist-item-decode{
+        white-space: pre; /* CSS 2.0 */
+        white-space: pre-wrap; /* CSS 2.1 */
+         /* CSS 3.0 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -hp-pre-wrap; /* HP Printers */
+        word-wrap: break-word; /* IE 5+ */
+      }      
+
+      ul.SubClass {
+        list-style-type: '- ';
+        padding-left: 5;
+        margin: 0 0 0 0;
+      }
+      ul.SubClass.li {}
+
+      #main .docinfo{
+        width: 95%;
+        text-align: right;
+        padding: 0px 5px;
+      }
+      
+      div.containerbox{
+        padding: 0px;
+        margin: 10px auto;
+        border: 0px;
+        page-break-after: always;
+      }
+      
+      .study-name{
+        font-size: 1.6em;
+        font-weight: bold;
+        text-align: left;
+        padding: 15px;
+        margin-left: 20px;
+        margin-top: 40px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        color: #696969;
+        border: 0px;
+      }
+      
+      div.study-metadata{
+        font-size: 1.6em;
+        font-weight: bold;
+        text-align: left;
+        padding: 0px;
+        margin-left: 0px;
+        margin-top: 00px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        color: #696969;
+        border: 0px;
+      }
+      
+      dl.study-metadata{
+        width: 95%;
+        padding: 5px 0px;
+        font-size: 0.8em;
+        color: black;
+      }
+      
+      dl.study-metadata dt{
+        clear: left;
+        float: left;
+        width: 200px;
+        margin: 0;
+        padding: 5px 5px 5px 0px;
+        font-weight: bold;
+      }
+      
+      dl.study-metadata dd{
+        margin-left: 210px;
+        padding: 5px;
+        font-weight: normal;
+        min-height: 20px;
+      }
+      
+      div.codelist{
+        page-break-after: avoid;
+      }
+      
+      div.qval-indent {
+      margin-left: 20px;
+      }
+      
+      div.qval-indent2 {
+      margin-left: 40px;
+      }
+      
+      table{
+        width: 95%;
+        border-spacing: 4px;
+        border: 1px solid #000000;
+        background-color: #EEEEEE;
+        margin-top: 5px;
+        border-collapse: collapse;
+        padding: 5px;
+        empty-cells: show;
+      }
+      
+      table caption{
+        border: 0px;
+        left: 20px;
+        font-size: 1.4em;
+        font-weight: bolder;
+        color: #696969;
+        margin: 10px auto;
+        text-align: left;
+      }
+      
+      .description{
+        margin-left: 0px;
+        color: black;
+        font-weight: normal;
+        font-size: 0.85em;
+      }
+      
+      table caption .dataset{
+        font-weight: normal;
+        float: right;
+      }
+
+      table caption.header{
+        font-size: 1.6em;
+        margin-left: 0;
+        font-weight: bolder;
+        text-align: center;
+        color: #696969;
+      }
+      
+      table tr{
+        border: 1px solid #000000;
+      }
+      
+      table tr.header{
+        background-color: #6699CC;
+        color: #FFFFFF;
+        font-weight: bold;
+      }
+      
+      table th{
+        font-weight: bold;
+        vertical-align: top;
+        text-align: left;
+        padding: 5px;
+        border: 1px solid #000000;
+        font-size: 1.3em;
+      }
+      
+      table th.codedvalue{
+        width: 20%;
+      }
+      table th.length{
+        width: 7%;
+      }
+ 
+      table th.label{
+        width: 13%;
+      }
+ 
+      table td{
+        vertical-align: top;
+        padding: 5px;
+        border: 1px solid #000000;
+        font-size: 1.2em;
+        line-height: 150%;
+      }
+
+      table td.datatype{
+        text-align: left;
+      }
+      table td.role{
+        text-align: left;
+      }
+      table td.number{
+        text-align: right;
+      }
+      
+      tr.tablerowodd{
+        background-color: #FFFFFF;
+      }
+      tr.tableroweven{
+        background-color: #EEEEEE;
+      }
+      
+      .linebreakcell{
+        vertical-align: top;
+        margin-top: 3px;
+        margin-bottom: 3px;
+      }
+      
+      .nci,
+      .extended{
+        font-style: italic;
+      }
+      .super{
+        vertical-align: super;
+      }
+      .footnote{
+        font-size: 1.2em;
+      }
+      
+      .valuelist-reference{
+      vertical-align: super;
+      font-size: 0.8em;
+      padding-left: 5px;
+      cursor: pointer;
+      }
+      
+      .valuelist-no-reference{
+      vertical-align: super;
+      font-size: 0.8em;
+      padding-left: 5px;
+      }
+      
+      div.formalexpression{
+        margin-top: 6px;
+        margin-bottom: 6px;      
+      }
+
+      span.label{
+        font-weight: bold;      
+      }
+
+      .formalexpression-reference{
+        vertical-align: super;
+        font-size: 0.8em;
+        padding-left: 5px;
+      }
+
+      .formalexpression-code{
+        font-family:"Courier New", monospace, serif;
+        font-size:1.2em;
+        line-height:120%;
+        display:block;
+        vertical-align:top;
+        margin: 0px;
+        padding: 5px 0 0 20px;
+        white-space:pre;  /* CSS 2.0 */
+        white-space: pre-wrap; /* CSS 2.1 */
+        /* CSS 3.0 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -hp-pre-wrap; /* HP Printers */
+        word-wrap: break-word; /* IE 5+ */
+      }
+      
+      .method-code{
+        vertical-align: top;
+        white-space: pre; /* CSS 2.0 */
+        white-space: pre-wrap; /* CSS 2.1 */
+         /* CSS 3.0 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -hp-pre-wrap; /* HP Printers */
+        word-wrap: break-word; /* IE 5+ */
+      }
+
+      .linktop{
+        font-size: 1.2em;
+        margin-top: 5px;
+      }
+      .documentinfo,
+      .stylesheetinfo{
+        font-size: 1.1em;
+        line-height: 60%;
+      }
+      
+      .invisible{
+        display: none;
+      }
+      
+      .standard-refeference {
+        width: 95%;
+        font-size: 1.0em;
+        font-weight: bold;
+        padding: 5px;
+        color: #696969;
+        white-space: nowrap;
+      }
+
+      .nodata{
+        width: 95%;
+        font-size: 1.0em;
+        font-weight: bold;
+        padding: 5px;
+        color: #000000;
+        white-space: nowrap;
+      }
+
+      span.unresolved{
+        color: #000000;
+      }
+      td.unresolved{
+      color: #000000;
+      }
+      td.span.unresolved{
+      color: #000000;
+      }
+      
+      span.prefix{
+        font-weight: normal;
+      }      
+
+      .arm-summary{
+        width: 95%;
+        border-spacing: 5px;
+        border-width: 1px;
+        border-color: #000000;
+        border-style: solid solid none solid;
+        background-color: #EEEEEE;
+        font-size: 1.2em;
+        line-height: 150%;
+        vertical-align: top;
+      }
+      .arm-summary-resultdisplay{
+        margin: 0px 0px 0px 0px;
+        padding: 10px 10px 10px 10px;  
+        border-spacing: 5px;
+        border-width: 1px;
+        border-color #000000;
+        border-style: none none solid none;
+      }
+
+      .arm-display-title{
+        margin-left: 5pt;
+      }
+      
+      .table.analysisresults-detail{
+        background-color: #EEEEEE;
+      }
+      
+      .arm-summary-result{
+        margin-left: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      th span.arm-displaytitle{
+        font-weight: bold;
+      }
+      td span.arm-resulttitle{
+        font-weight: bold;
+      }
+      tr.arm-analysisresult{
+        background-color: #6699CC;
+        color: #FFFFFF;
+        font-weight: bold;
+        border: 1px solid #000000;
+      }
+      td.arm-label{
+        font-weight: bold;
+      }
+
+      p.arm-analysisvariable{
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .arm-data-reference{
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      
+      .arm-code-context{
+        padding: 5px 0px;
+      }
+      .arm-code-ref{
+        font-size: 1.2em;
+        line-height: 150%;
+        padding: 5px;
+      }
+
+      .arm-code{
+        font-family:"Courier New", monospace, serif;
+        font-size:1.2em;
+        line-height:120%;
+        display:block;
+        vertical-align:top;
+        margin: 0px;
+        padding:0px;
+        white-space:pre;  /* CSS 2.0 */
+        white-space: pre-wrap; /* CSS 2.1 */
+        /* CSS 3.0 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -hp-pre-wrap; /* HP Printers */
+        word-wrap: break-word; /* IE 5+ */
+      }
+      
+
+      
+      @media print{
+      
+        @page {
+          margin: 1.5cm;
+        }
+      
+        body,
+        h1,
+        table caption,
+        table caption.header{
+          color: #000;
+          background: #fff;
+          float: none !important;
+        }
+      
+        div.containerbox{
+          padding: 0px;
+          border: 0px;
+          page-break-after: always;
+        }
+      
+        a:link,
+        a:visited{
+          background: transparent;
+          text-decoration: none;
+          color: black;
+        }
+        a.external:link:after,
+        #main a:visited:after{
+          content: " (" attr(href) ") ";
+          font-size: 100%;
+          text-decoration: underline;
+          font-weight: normal;
+          color: black;
+        }
+        .external-link-gif,
+        .formalexpression-reference
+        .valuelist-reference{
+          display: none !important;
+          width: 0px;
+        }
+        
+        table{
+          border-width: 2px;
+        }
+
+        table tr.vlm{
+        display: table-row !important;
+        }
+      
+        #menu,
+        .linktop{
+          display: none !important;
+          width: 0px;
+        }
+        #main{
+          left: 2cm;
+          float: none !important;
+        }
+        span.prefix{
+          font-weight: normal;
+        }
+        
+        row, ul, img {
+          page-break-inside: avoid;
+        }
+      
+      }
+    </style>
+  </head><body onload="reset_menus();"><div id="menu"><a name="top" class="invisible" href="#main">Skip Navigation Link</a><span class="study-name">CDISCPILOT01</span><ul class="hmenu"><li class="hmenu-item"><span class="hmenu-bullet" onclick="toggle_submenu(this);">-</span><a class="tocItem" href="#Standards_Table">Standards</a></li><li class="hmenu-submenu"><span class="hmenu-bullet" onclick="toggle_submenu(this);">+</span><a class="tocItem" href="#datasets">Datasets</a><ul><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#IG.IG.LB">LB (Laboratory Test Results)</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#IG.IG.VS">VS (Vital Signs)</a></li></ul></li></ul></div><div id="main"><div class="docinfo"><p class="documentinfo">Date/Time of Define-XML document generation: 2023-04-12T18:03:13-04:00</p><p class="documentinfo">Define-XML version: 2.1.0</p><p class="documentinfo">Define-XML Context: Submission</p><p class="stylesheetinfo">Stylesheet version: 2019-02-11</p></div><div class="study-metadata"><dl class="study-metadata"><dt>Study Name</dt><dd>CDISCPILOT01</dd><dt>Study Description</dt><dd>Study Data Tabulation Model Sample Study</dd><dt>Protocol Name</dt><dd>CDISCPILOT01</dd><dt>Metadata Name</dt><dd>Data Definitions for SDTM datasets</dd></dl></div><h1 class="invisible">Standards for Study CDISCPILOT01</h1><div class="containerbox"><table id="Standards_Table" summary="Standards"><caption class="header">Standards for Study CDISCPILOT01</caption><tr class="header"><th scope="col">Standard</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">Documentation</th></tr><tr class="tablerowodd" id="STD.STD.1"><td>SDTMIG 3.3</td><td>IG</td><td>Final</td><td></td></tr><tr class="tableroweven" id="STD.STD.2"><td>CDISC/NCI SDTM 2023-03-31</td><td>CT</td><td>Final</td><td></td></tr><tr class="tablerowodd" id="STD.STD.3"><td>CDISC/NCI DEFINE-XML 2022-12-16</td><td>CT</td><td>Final</td><td></td></tr></table></div><br><a id="datasets"></a><h1 class="invisible">Datasets</h1><div class="containerbox"><table summary="Data Definition Tables"><caption class="header">Datasets</caption><tr class="header"><th scope="col">Dataset</th><th scope="col">Description</th><th scope="col">Class
+            
+            </th><th scope="col">Structure</th><th scope="col">Purpose</th><th scope="col">Keys</th><th scope="col">Documentation</th><th scope="col">Location</th></tr><tr class="tablerowodd" id="IG.LB"><td><a href="#IG.IG.LB">LB</a><span class="standard-refeference">[SDTMIG 3.3]</span></td><td>Laboratory Test Results</td><td>FINDINGS</td><td>One record per analyte per visit per subject</td><td>Tabulation</td><td>STUDYID, USUBJID, LBCAT, LBMETHOD, LBTESTCD, LBDTC, VISITNUM, LBNAM</td><td></td><td><a class="external" href="lb.xpt">lb.xpt</a><span class="external-link-gif"></span> </td></tr><tr class="tableroweven" id="IG.VS"><td><a href="#IG.IG.VS">VS</a><span class="standard-refeference">[SDTMIG 3.3]</span></td><td>Vital Signs</td><td>FINDINGS</td><td>One record per vital sign measurement per visit per subject</td><td>Tabulation</td><td>STUDYID, USUBJID, VSTESTCD, VSPOS, VISITNUM, VSREPNUM</td><td></td><td><a class="external" href="vs.xpt">vs.xpt</a><span class="external-link-gif"></span> </td></tr></table></div><p class="linktop">Go to the <a href="#main">top</a> of the Define-XML document</p><br><a id="IG.IG.LB"></a><div class="containerbox"><h1 class="invisible">Laboratory Test Results (LB) </h1><table summary="ItemGroup IG.IG.LB"><caption><span>LB (Laboratory Test Results) -  <span class="standard-refeference">[SDTMIG 3.3]</span><span class="dataset">Location: <a class="external" href="lb.xpt">lb.xpt</a><span class="external-link-gif"></span> </span></span></caption><tr class="header"><th scope="col">Variable</th><th scope="col">Label / Description</th><th scope="col">Type</th><th scope="col">Role</th><th scope="col" class="length">Length or Display Format</th><th scope="col" abbr="Format">Controlled Terms or ISO Format</th><th scope="col">Origin / Source / Method / Comment</th></tr><tr class="tablerowodd"><td><a id="IG.LB.IT.LB.STUDYID"></a>STUDYID</td><td>Study Identifier</td><td class="datatype">text</td><td class="role">Identifier</td><td class="number">12</td><td></td><td><div class="linebreakcell">Protocol (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.LB.IT.LB.DOMAIN"></a>DOMAIN</td><td>Domain Abbreviation</td><td class="datatype">text</td><td class="role">Identifier</td><td class="number">2</td><td></td><td><div class="linebreakcell">Assigned (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.LB.IT.LB.USUBJID"></a>USUBJID</td><td>Unique Subject Identifier</td><td class="datatype">text</td><td class="role">Identifier</td><td class="number">8</td><td></td><td><div class="linebreakcell">Assigned (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.LB.IT.LB.LBSEQ"></a>LBSEQ</td><td>Sequence Number</td><td class="datatype">integer</td><td class="role">Identifier</td><td class="number">3</td><td></td><td><div class="linebreakcell">Derived (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.LB.IT.LB.LBTESTCD"></a>LBTESTCD</td><td>Lab Test or Examination Short Name</td><td class="datatype">text</td><td class="role">Topic</td><td class="number">8</td><td></td><td><div class="linebreakcell">Assigned (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.LB.IT.LB.LBTEST"></a>LBTEST</td><td>Lab Test or Examination Name</td><td class="datatype">text</td><td class="role">Synonym Qualifier</td><td class="number">40</td><td></td><td><div class="linebreakcell">Assigned (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.LB.IT.LB.LBCAT"></a>LBCAT</td><td>Category for Lab Test</td><td class="datatype">text</td><td class="role">Grouping Qualifier</td><td class="number">10</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.LB.IT.LB.LBORRES"></a>LBORRES</td><td>Result or Finding in Original Units</td><td class="datatype">text</td><td class="role">Result Qualifier</td><td class="number">20</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.LB.IT.LB.LBORRESU"></a>LBORRESU</td><td>Original Units</td><td class="datatype">text</td><td class="role">Variable Qualifier</td><td class="number">13</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.LB.IT.LB.LBORNRLO"></a>LBORNRLO</td><td>Reference Range Lower Limit in Orig Unit</td><td class="datatype">text</td><td class="role">Variable Qualifier</td><td class="number">6</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.LB.IT.LB.LBORNRHI"></a>LBORNRHI</td><td>Reference Range Upper Limit in Orig Unit</td><td class="datatype">text</td><td class="role">Variable Qualifier</td><td class="number">6</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.LB.IT.LB.LBSTRESC"></a>LBSTRESC</td><td>Character Result/Finding in Std Format</td><td class="datatype">text</td><td class="role">Result Qualifier</td><td class="number">20</td><td></td><td><div class="linebreakcell">Derived (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.LB.IT.LB.LBSTRESN"></a>LBSTRESN</td><td>Numeric Result/Finding in Standard Units</td><td class="datatype">float</td><td class="role">Result Qualifier</td><td class="number">12</td><td></td><td><div class="linebreakcell">Derived (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.LB.IT.LB.LBSTRESU"></a>LBSTRESU</td><td>Standard Units</td><td class="datatype">text</td><td class="role">Variable Qualifier</td><td class="number">13</td><td></td><td><div class="linebreakcell">Assigned (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.LB.IT.LB.LBSTNRLO"></a>LBSTNRLO</td><td>Reference Range Lower Limit-Std Units</td><td class="datatype">float</td><td class="role">Variable Qualifier</td><td class="number">5</td><td></td><td><div class="linebreakcell">Assigned (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.LB.IT.LB.LBSTNRHI"></a>LBSTNRHI</td><td>Reference Range Upper Limit-Std Units</td><td class="datatype">float</td><td class="role">Variable Qualifier</td><td class="number">5</td><td></td><td><div class="linebreakcell">Assigned (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.LB.IT.LB.LBNRIND"></a>LBNRIND</td><td>Reference Range Indicator</td><td class="datatype">text</td><td class="role">Variable Qualifier</td><td class="number">8</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.LB.IT.LB.LBSTAT"></a>LBSTAT</td><td>Completion Status</td><td class="datatype">text</td><td class="role">Record Qualifier</td><td class="number">8</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Investigator</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.LB.IT.LB.LBREASND"></a>LBREASNB</td><td>Reason Test Not Done</td><td class="datatype">text</td><td class="role">Record Qualifier</td><td class="number">30</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Investigator</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.LB.IT.LB.LBNAM"></a>LBNAM</td><td>Vendor Name</td><td class="datatype">text</td><td class="role">Record Qualifier</td><td class="number">20</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.LB.IT.LB.LBLOINC"></a>LBLOINC</td><td>LOINC Code</td><td class="datatype">text</td><td class="role">Synonym  Qualifier</td><td class="number">10</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.LB.IT.LB.LBSPEC"></a>LBSPEC</td><td>Specimen Type</td><td class="datatype">text</td><td class="role">Record Qualifier</td><td class="number">15</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.LB.IT.LB.LBMETHOD"></a>LBMETHOD</td><td>Method of Test or Examination</td><td class="datatype">text</td><td class="role">Record Qualifier</td><td class="number">10</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.LB.IT.LB.LBLOBXFL"></a>LBLOBXFL</td><td>Last Observation Before Exposure Flag</td><td class="datatype">text</td><td class="role">Record Qualifier</td><td class="number">1</td><td></td><td><div class="linebreakcell">Derived (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.LB.IT.LB.LBFAST"></a>LBFAST</td><td>Fasting Status</td><td class="datatype">text</td><td class="role">Record Qualifier</td><td class="number">1</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.LB.IT.LB.VISITNUM"></a>VISITNUM</td><td>Visit Number</td><td class="datatype">float</td><td class="role">Timing</td><td class="number">8</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.LB.IT.LB.VISIT"></a>VISIT</td><td>Visit Name</td><td class="datatype">text</td><td class="role">Timing</td><td class="number">20</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.LB.IT.LB.EPOCH"></a>EPOCH</td><td>Epoch</td><td class="datatype">text</td><td class="role">Timing</td><td class="number">9</td><td></td><td><div class="linebreakcell">Derived (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.LB.IT.LB.LBDTC"></a>LBDTC</td><td>Date/Time of Specimen Collection</td><td class="datatype">partialDatetime</td><td class="role">Timing</td><td class="number"></td><td>ISO 8601</td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.LB.IT.LB.LBDY"></a>LBDY</td><td>Study Day of Specimen Collection</td><td class="datatype">integer</td><td class="role">Timing</td><td class="number">8</td><td></td><td><div class="linebreakcell">Derived (<span class="linebreakcell">Source: Vendor</span>)</div></td></tr></table></div><p class="linktop">Go to the <a href="#main">top</a> of the Define-XML document</p><br><a id="IG.IG.VS"></a><div class="containerbox"><h1 class="invisible">Vital Signs (VS) </h1><table summary="ItemGroup IG.IG.VS"><caption><span>VS (Vital Signs) -  <span class="standard-refeference">[SDTMIG 3.3]</span><span class="dataset">Location: <a class="external" href="vs.xpt">vs.xpt</a><span class="external-link-gif"></span> </span></span></caption><tr class="header"><th scope="col">Variable</th><th scope="col">Label / Description</th><th scope="col">Type</th><th scope="col">Role</th><th scope="col" class="length">Length or Display Format</th><th scope="col" abbr="Format">Controlled Terms or ISO Format</th><th scope="col">Origin / Source / Method / Comment</th></tr><tr class="tablerowodd"><td><a id="IG.VS.IT.VS.STUDYID"></a>STUDYID</td><td>Study Identifier</td><td class="datatype">text</td><td class="role">Identifier</td><td class="number">12</td><td></td><td><div class="linebreakcell">Protocol (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.VS.IT.VS.DOMAIN"></a>DOMAIN</td><td>Domain Abbreviation</td><td class="datatype">text</td><td class="role">Identifier</td><td class="number">2</td><td></td><td><div class="linebreakcell">Assigned (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.VS.IT.VS.USUBJID"></a>USUBJID</td><td>Unique Subject Identifier</td><td class="datatype">text</td><td class="role">Identifier</td><td class="number">8</td><td></td><td><div class="linebreakcell">Assigned (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.VS.IT.VS.VSSEQ"></a>VSSEQ</td><td>Sequence Number</td><td class="datatype">integer</td><td class="role">Identifier</td><td class="number">3</td><td></td><td><div class="linebreakcell">Derived (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.VS.IT.VS.VSTESTCD"></a>VSTESTCD</td><td>Vital Signs Test Short Name</td><td class="datatype">text</td><td class="role">Topic</td><td class="number">8</td><td></td><td><div class="linebreakcell">Assigned (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.VS.IT.VS.VSTEST"></a>VSTEST</td><td>Vital Signs Test Name</td><td class="datatype">text</td><td class="role">Synonym Qualifier</td><td class="number">40</td><td></td><td><div class="linebreakcell">Assigned (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.VS.IT.VS.VSPOS"></a>VSPOS</td><td>Vital Signs Position of Subject</td><td class="datatype">text</td><td class="role">Record Qualifier</td><td class="number">8</td><td></td><td><div class="linebreakcell">Assigned (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.VS.IT.VS.VSORRES"></a>VSORRES</td><td>Result or Finding in Original Units</td><td class="datatype">text</td><td class="role">Result Qualifier</td><td class="number">20</td><td></td><td></td></tr><tr class="tablerowodd"><td><a id="IG.VS.IT.VS.VSORRESU"></a>VSORRESU</td><td>Original Units</td><td class="datatype">text</td><td class="role">Variable Qualifier</td><td class="number">11</td><td></td><td></td></tr><tr class="tableroweven"><td><a id="IG.VS.IT.VS.VSSTRESC"></a>VSSTRESC</td><td>Character Result/Finding in Std Format</td><td class="datatype">text</td><td class="role">Result Qualifier</td><td class="number">20</td><td></td><td><div class="linebreakcell">Derived (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.VS.IT.VS.VSSTRESN"></a>VSSTRESN</td><td>Numeric Result/Finding in Standard Units</td><td class="datatype">float</td><td class="role">Result Qualifier</td><td class="number">8</td><td></td><td><div class="linebreakcell">Derived (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.VS.IT.VS.VSSTRESU"></a>VSSTRESU</td><td>Standard Units</td><td class="datatype">text</td><td class="role">Variable Qualifier</td><td class="number">11</td><td></td><td><div class="linebreakcell">Assigned (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.VS.IT.VS.VSLOC"></a>VSLOC</td><td>Location of Vital Signs Measurement</td><td class="datatype">text</td><td class="role">Record Qualifier</td><td class="number">30</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Investigator</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.VS.IT.VS.VSLAT"></a>VSLAT</td><td>Laterality</td><td class="datatype">text</td><td class="role">Record Qualifier</td><td class="number">5</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Investigator</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.VS.IT.VS.VSSTAT"></a>VSSTAT</td><td>Completion Status</td><td class="datatype">text</td><td class="role">Record Qualifier</td><td class="number">8</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Investigator</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.VS.IT.VS.VSREASND"></a>VSREASNB</td><td>Reason Test Not Done</td><td class="datatype">text</td><td class="role">Record Qualifier</td><td class="number">30</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Investigator</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.VS.IT.VS.VSLOBXFL"></a>VSLOBXFL</td><td>Last Observation Before Exposure Flag</td><td class="datatype">text</td><td class="role">Record Qualifier</td><td class="number">1</td><td></td><td><div class="linebreakcell">Derived (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.VS.IT.VS.VSREPNUM"></a>VSREPNUM</td><td>Repetition Number</td><td class="datatype">integer</td><td class="role">Record Qualifier</td><td class="number">8</td><td></td><td><div class="linebreakcell">Assigned (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.VS.IT.VS.VISITNUM"></a>VISITNUM</td><td>Visit Number</td><td class="datatype">float</td><td class="role">Timing</td><td class="number">8</td><td></td><td><div class="linebreakcell">Assigned (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.VS.IT.VS.VISIT"></a>VISIT</td><td>Visit Name</td><td class="datatype">text</td><td class="role">Timing</td><td class="number">20</td><td></td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Investigator</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.VS.IT.VS.EPOCH"></a>EPOCH</td><td>Epoch</td><td class="datatype">text</td><td class="role">Timing</td><td class="number">9</td><td></td><td><div class="linebreakcell">Derived (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr><tr class="tableroweven"><td><a id="IG.VS.IT.VS.VSDTC"></a>VSDTC</td><td>Date/Time of Measurements</td><td class="datatype">date</td><td class="role">Timing</td><td class="number"></td><td>ISO 8601</td><td><div class="linebreakcell">Collected (<span class="linebreakcell">Source: Investigator</span>)</div></td></tr><tr class="tablerowodd"><td><a id="IG.VS.IT.VS.VSDY"></a>VSDY</td><td>Study Day of Vital Signs</td><td class="datatype">integer</td><td class="role">Timing</td><td class="number">8</td><td></td><td><div class="linebreakcell">Derived (<span class="linebreakcell">Source: Sponsor</span>)</div></td></tr></table></div><p class="linktop">Go to the <a href="#main">top</a> of the Define-XML document</p><br></div></body></html>

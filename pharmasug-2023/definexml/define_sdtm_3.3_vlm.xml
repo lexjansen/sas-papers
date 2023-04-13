@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="define2-1.xsl"?>
 <!-- Produced with SAS 9.4 - SAS Open Clinical Standards Toolkit-->
-<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyMSGv2/1/Define-XML_2.1.0" CreationDateTime="2023-04-10T09:44:40-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
+<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyMSGv2/1/Define-XML_2.1.0" CreationDateTime="2023-04-13T12:52:12-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
   <Study OID="cdisc.com/CDISCPILOT01">
     <GlobalVariables>
       <StudyName>CDISCPILOT01</StudyName>
@@ -6955,8 +6955,7 @@
       </CodeList>
       <def:CommentDef OID="COM.MDV.SDTMIG.3.3.SDTM.1.7">
         <Description>
-          <TranslatedText xml:lang="en">This Define-XML document is based on basic LB and VS dataset and column metadata.   
-            Value level metadata (VLM) and codelists were programmatically created by extracting metadata from CDISC SDTM Dataset Specializations and the CDISC Library.</TranslatedText>
+          <TranslatedText xml:lang="en">This Define-XML document is based on basic LB and VS dataset and column metadata. Value level metadata (VLM) and codelists were programmatically created by extracting metadata from CDISC SDTM Dataset Specializations and the CDISC Library.</TranslatedText>
         </Description>
       </def:CommentDef>
     </MetaDataVersion>
