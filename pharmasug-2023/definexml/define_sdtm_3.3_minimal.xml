@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="define2-1.xsl"?>
+<!-- Produced with SAS 9.4 -->
+<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyMSGv2/1/Define-XML_2.1.0" CreationDateTime="2023-04-12T18:03:13-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
+  <Study OID="cdisc.com/CDISCPILOT01">
+    <GlobalVariables>
+      <StudyName>CDISCPILOT01</StudyName>
+      <StudyDescription>Study Data Tabulation Model Sample Study</StudyDescription>
+      <ProtocolName>CDISCPILOT01</ProtocolName>
+    </GlobalVariables>
+    <MetaDataVersion OID="MDV.SDTMIG.3.3.SDTM.1.7" Name="Data Definitions for SDTM datasets" def:DefineVersion="2.1.0">
+      <def:Standards>
+        <def:Standard OID="STD.1" Name="SDTMIG" Type="IG" Version="3.3" Status="Final"/>
+        <def:Standard OID="STD.2" Name="CDISC/NCI" Type="CT" PublishingSet="SDTM" Version="2023-03-31" Status="Final"/>
+        <def:Standard OID="STD.3" Name="CDISC/NCI" Type="CT" PublishingSet="DEFINE-XML" Version="2022-12-16" Status="Final"/>
+      </def:Standards>
+      <ItemGroupDef OID="IG.LB" Name="LB" Repeating="Yes" IsReferenceData="No" SASDatasetName="LB" Domain="LB" Purpose="Tabulation" def:Structure="One record per analyte per visit per subject" def:ArchiveLocationID="LF.LB" def:StandardOID="STD.1">
+        <Description>
+          <TranslatedText xml:lang="en">Laboratory Test Results</TranslatedText>
+        </Description>
+        <ItemRef ItemOID="IT.LB.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="1" Role="Identifier"/>
+        <ItemRef ItemOID="IT.LB.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
+        <ItemRef ItemOID="IT.LB.USUBJID" Mandatory="Yes" OrderNumber="3" KeySequence="2" Role="Identifier"/>
+        <ItemRef ItemOID="IT.LB.LBSEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
+        <ItemRef ItemOID="IT.LB.LBTESTCD" Mandatory="Yes" OrderNumber="5" KeySequence="5" Role="Topic"/>
+        <ItemRef ItemOID="IT.LB.LBTEST" Mandatory="Yes" OrderNumber="6" Role="Synonym Qualifier"/>
+        <ItemRef ItemOID="IT.LB.LBCAT" Mandatory="No" OrderNumber="7" KeySequence="3" Role="Grouping Qualifier"/>
+        <ItemRef ItemOID="IT.LB.LBORRES" Mandatory="No" OrderNumber="8" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.LB.LBORRESU" Mandatory="No" OrderNumber="9" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.LB.LBORNRLO" Mandatory="No" OrderNumber="10" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.LB.LBORNRHI" Mandatory="No" OrderNumber="11" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.LB.LBSTRESC" Mandatory="No" OrderNumber="12" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.LB.LBSTRESN" Mandatory="No" OrderNumber="13" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.LB.LBSTRESU" Mandatory="No" OrderNumber="14" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.LB.LBSTNRLO" Mandatory="No" OrderNumber="15" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.LB.LBSTNRHI" Mandatory="No" OrderNumber="16" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.LB.LBNRIND" Mandatory="No" OrderNumber="17" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.LB.LBSTAT" Mandatory="No" OrderNumber="18" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.LB.LBREASND" Mandatory="No" OrderNumber="19" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.LB.LBNAM" Mandatory="No" OrderNumber="20" KeySequence="8" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.LB.LBLOINC" Mandatory="No" OrderNumber="21" Role="Synonym  Qualifier"/>
+        <ItemRef ItemOID="IT.LB.LBSPEC" Mandatory="Yes" OrderNumber="22" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.LB.LBMETHOD" Mandatory="No" OrderNumber="23" KeySequence="4" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.LB.LBLOBXFL" Mandatory="No" OrderNumber="24" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.LB.LBFAST" Mandatory="No" OrderNumber="25"  Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.LB.VISITNUM" Mandatory="No" OrderNumber="26" KeySequence="7" Role="Timing"/>
+        <ItemRef ItemOID="IT.LB.VISIT" Mandatory="No" OrderNumber="27" Role="Timing"/>
+        <ItemRef ItemOID="IT.LB.EPOCH" Mandatory="No" OrderNumber="28" Role="Timing"/>
+        <ItemRef ItemOID="IT.LB.LBDTC" Mandatory="No" OrderNumber="29" KeySequence="6" Role="Timing"/>
+        <ItemRef ItemOID="IT.LB.LBDY" Mandatory="No" OrderNumber="30" Role="Timing"/>
+        <def:Class Name="FINDINGS"/>
+        <def:leaf ID="LF.LB" xlink:href="lb.xpt">
+          <def:title>lb.xpt</def:title>
+        </def:leaf>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.VS" Name="VS" Repeating="Yes" IsReferenceData="No" SASDatasetName="VS" Domain="VS" Purpose="Tabulation" def:Structure="One record per vital sign measurement per visit per subject" def:ArchiveLocationID="LF.VS" def:StandardOID="STD.1">
+        <Description>
+          <TranslatedText xml:lang="en">Vital Signs</TranslatedText>
+        </Description>
+        <ItemRef ItemOID="IT.VS.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="1" Role="Identifier"/>
+        <ItemRef ItemOID="IT.VS.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
+        <ItemRef ItemOID="IT.VS.USUBJID" Mandatory="Yes" OrderNumber="3" KeySequence="2" Role="Identifier"/>
+        <ItemRef ItemOID="IT.VS.VSSEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
+        <ItemRef ItemOID="IT.VS.VSTESTCD" Mandatory="Yes" OrderNumber="5" KeySequence="3" Role="Topic"/>
+        <ItemRef ItemOID="IT.VS.VSTEST" Mandatory="Yes" OrderNumber="6" Role="Synonym Qualifier"/>
+        <ItemRef ItemOID="IT.VS.VSPOS" Mandatory="No" OrderNumber="7" KeySequence="4" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.VS.VSORRES" Mandatory="No" OrderNumber="8" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.VS.VSORRESU" Mandatory="No" OrderNumber="9" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.VS.VSSTRESC" Mandatory="No" OrderNumber="10" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.VS.VSSTRESN" Mandatory="No" OrderNumber="11" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.VS.VSSTRESU" Mandatory="No" OrderNumber="12" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.VS.VSLOC" Mandatory="No" OrderNumber="14" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.VS.VSLAT" Mandatory="No" OrderNumber="15" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.VS.VSSTAT" Mandatory="No" OrderNumber="16" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.VS.VSREASND" Mandatory="No" OrderNumber="17" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.VS.VSLOBXFL" Mandatory="No" OrderNumber="18" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.VS.VSREPNUM" Mandatory="No" OrderNumber="19" KeySequence="6" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.VS.VISITNUM" Mandatory="No" OrderNumber="20" KeySequence="5" Role="Timing"/>
+        <ItemRef ItemOID="IT.VS.VISIT" Mandatory="No" OrderNumber="21" Role="Timing"/>
+        <ItemRef ItemOID="IT.VS.EPOCH" Mandatory="No" OrderNumber="22" Role="Timing"/>
+        <ItemRef ItemOID="IT.VS.VSDTC" Mandatory="No" OrderNumber="23" Role="Timing"/>
+        <ItemRef ItemOID="IT.VS.VSDY" Mandatory="No" OrderNumber="24" Role="Timing"/>
+        <def:Class Name="FINDINGS"/>
+        <def:leaf ID="LF.VS" xlink:href="vs.xpt">
+          <def:title>vs.xpt</def:title>
+        </def:leaf>
+      </ItemGroupDef>
+      <ItemDef OID="IT.LB.DOMAIN" Name="DOMAIN" DataType="text" Length="2">
+        <Description>
+          <TranslatedText xml:lang="en">Domain Abbreviation</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.EPOCH" Name="EPOCH" DataType="text" Length="9">
+        <Description>
+          <TranslatedText xml:lang="en">Epoch</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBCAT" Name="LBCAT" DataType="text" Length="10">
+        <Description>
+          <TranslatedText xml:lang="en">Category for Lab Test</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBDTC" Name="LBDTC" DataType="partialDatetime">
+        <Description>
+          <TranslatedText xml:lang="en">Date/Time of Specimen Collection</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBDY" Name="LBDY" DataType="integer" Length="8">
+        <Description>
+          <TranslatedText xml:lang="en">Study Day of Specimen Collection</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBLOBXFL" Name="LBLOBXFL" DataType="text" Length="1">
+        <Description>
+          <TranslatedText xml:lang="en">Last Observation Before Exposure Flag</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBFAST" Name="LBFAST" DataType="text" Length="1">
+        <Description>
+          <TranslatedText xml:lang="en">Fasting Status</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBNRIND" Name="LBNRIND" DataType="text" Length="8">
+        <Description>
+          <TranslatedText xml:lang="en">Reference Range Indicator</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBSTAT" Name="LBSTAT" DataType="text" Length="8">
+        <Description>
+          <TranslatedText xml:lang="en">Completion Status</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator">
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBREASND" Name="LBREASNB" DataType="text" Length="30">
+        <Description>
+          <TranslatedText xml:lang="en">Reason Test Not Done</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator">
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBNAM" Name="LBNAM" DataType="text" Length="20">
+        <Description>
+          <TranslatedText xml:lang="en">Vendor Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBLOINC" Name="LBLOINC" DataType="text" Length="10">
+        <Description>
+          <TranslatedText xml:lang="en">LOINC Code</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBSPEC" Name="LBSPEC" DataType="text" Length="15">
+        <Description>
+          <TranslatedText xml:lang="en">Specimen Type</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBMETHOD" Name="LBMETHOD" DataType="text" Length="10">
+        <Description>
+          <TranslatedText xml:lang="en">Method of Test or Examination</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBORNRHI" Name="LBORNRHI" DataType="text" Length="6">
+        <Description>
+          <TranslatedText xml:lang="en">Reference Range Upper Limit in Orig Unit</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBORNRLO" Name="LBORNRLO" DataType="text" Length="6">
+        <Description>
+          <TranslatedText xml:lang="en">Reference Range Lower Limit in Orig Unit</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBORRES" Name="LBORRES" DataType="text" Length="20">
+        <Description>
+          <TranslatedText xml:lang="en">Result or Finding in Original Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBORRESU" Name="LBORRESU" DataType="text" Length="13">
+        <Description>
+          <TranslatedText xml:lang="en">Original Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBSEQ" Name="LBSEQ" DataType="integer" Length="3">
+        <Description>
+          <TranslatedText xml:lang="en">Sequence Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBSTNRHI" Name="LBSTNRHI" DataType="float" Length="5">
+        <Description>
+          <TranslatedText xml:lang="en">Reference Range Upper Limit-Std Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBSTNRLO" Name="LBSTNRLO" DataType="float" Length="5">
+        <Description>
+          <TranslatedText xml:lang="en">Reference Range Lower Limit-Std Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBSTRESC" Name="LBSTRESC" DataType="text" Length="20">
+        <Description>
+          <TranslatedText xml:lang="en">Character Result/Finding in Std Format</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBSTRESN" Name="LBSTRESN" DataType="float" Length="12">
+        <Description>
+          <TranslatedText xml:lang="en">Numeric Result/Finding in Standard Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBSTRESU" Name="LBSTRESU" DataType="text" Length="13">
+        <Description>
+          <TranslatedText xml:lang="en">Standard Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBTEST" Name="LBTEST" DataType="text" Length="40">
+        <Description>
+          <TranslatedText xml:lang="en">Lab Test or Examination Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.LBTESTCD" Name="LBTESTCD" DataType="text" Length="8">
+        <Description>
+          <TranslatedText xml:lang="en">Lab Test or Examination Short Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.STUDYID" Name="STUDYID" DataType="text" Length="12">
+        <Description>
+          <TranslatedText xml:lang="en">Study Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Protocol" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.USUBJID" Name="USUBJID" DataType="text" Length="8">
+        <Description>
+          <TranslatedText xml:lang="en">Unique Subject Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.VISIT" Name="VISIT" DataType="text" Length="20">
+        <Description>
+          <TranslatedText xml:lang="en">Visit Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.LB.VISITNUM" Name="VISITNUM" DataType="float" Length="8">
+        <Description>
+          <TranslatedText xml:lang="en">Visit Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Vendor"/>
+      </ItemDef>
+      <ItemDef OID="IT.VS.DOMAIN" Name="DOMAIN" DataType="text" Length="2">
+        <Description>
+          <TranslatedText xml:lang="en">Domain Abbreviation</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.VS.EPOCH" Name="EPOCH" DataType="text" Length="9">
+        <Description>
+          <TranslatedText xml:lang="en">Epoch</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.VS.STUDYID" Name="STUDYID" DataType="text" Length="12">
+        <Description>
+          <TranslatedText xml:lang="en">Study Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Protocol" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.VS.USUBJID" Name="USUBJID" DataType="text" Length="8">
+        <Description>
+          <TranslatedText xml:lang="en">Unique Subject Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.VS.VISIT" Name="VISIT" DataType="text" Length="20">
+        <Description>
+          <TranslatedText xml:lang="en">Visit Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.VS.VISITNUM" Name="VISITNUM" DataType="float" Length="8">
+        <Description>
+          <TranslatedText xml:lang="en">Visit Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor">
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.VS.VSDTC" Name="VSDTC" DataType="date">
+        <Description>
+          <TranslatedText xml:lang="en">Date/Time of Measurements</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator">
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.VS.VSDY" Name="VSDY" DataType="integer" Length="8">
+        <Description>
+          <TranslatedText xml:lang="en">Study Day of Vital Signs</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.VS.VSLOBXFL" Name="VSLOBXFL" DataType="text" Length="1">
+        <Description>
+          <TranslatedText xml:lang="en">Last Observation Before Exposure Flag</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.VS.VSLOC" Name="VSLOC" DataType="text" Length="30">
+        <Description>
+          <TranslatedText xml:lang="en">Location of Vital Signs Measurement</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator">
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.VS.VSLAT" Name="VSLAT" DataType="text" Length="5">
+        <Description>
+          <TranslatedText xml:lang="en">Laterality</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator">
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.VS.VSORRES" Name="VSORRES" DataType="text" Length="20">
+        <Description>
+          <TranslatedText xml:lang="en">Result or Finding in Original Units</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.VS.VSORRESU" Name="VSORRESU" DataType="text" Length="11">
+        <Description>
+          <TranslatedText xml:lang="en">Original Units</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.VS.VSPOS" Name="VSPOS" DataType="text" Length="8">
+        <Description>
+          <TranslatedText xml:lang="en">Vital Signs Position of Subject</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor">
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.VS.VSREPNUM" Name="VSREPNUM" DataType="integer" Length="8">
+        <Description>
+          <TranslatedText xml:lang="en">Repetition Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor">
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.VS.VSSEQ" Name="VSSEQ" DataType="integer" Length="3">
+        <Description>
+          <TranslatedText xml:lang="en">Sequence Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.VS.VSSTAT" Name="VSSTAT" DataType="text" Length="8">
+        <Description>
+          <TranslatedText xml:lang="en">Completion Status</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator">
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.VS.VSREASND" Name="VSREASNB" DataType="text" Length="30">
+        <Description>
+          <TranslatedText xml:lang="en">Reason Test Not Done</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator">
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.VS.VSSTRESC" Name="VSSTRESC" DataType="text" Length="20">
+        <Description>
+          <TranslatedText xml:lang="en">Character Result/Finding in Std Format</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.VS.VSSTRESN" Name="VSSTRESN" DataType="float" Length="8">
+        <Description>
+          <TranslatedText xml:lang="en">Numeric Result/Finding in Standard Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.VS.VSSTRESU" Name="VSSTRESU" DataType="text" Length="11">
+        <Description>
+          <TranslatedText xml:lang="en">Standard Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.VS.VSTEST" Name="VSTEST" DataType="text" Length="40">
+        <Description>
+          <TranslatedText xml:lang="en">Vital Signs Test Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.VS.VSTESTCD" Name="VSTESTCD" DataType="text" Length="8">
+        <Description>
+          <TranslatedText xml:lang="en">Vital Signs Test Short Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+    </MetaDataVersion>
+  </Study>
+</ODM>
