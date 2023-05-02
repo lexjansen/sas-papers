@@ -1,7 +1,7 @@
 # PharmaSUG 2023
 
 This repository contains all code and examples from the paper:
-**Working with Biomedical Concepts and SDTM Dataset Specializations for Define-XML using SAS© Open CST**
+**Working with Biomedical Concepts and SDTM Dataset Specializations for Define-XML using SAS© openCST**
 Presented at PharmaSUG 2023, May 14 - 17, San Francisco, CA
 
 Lex Jansen, CDISC (through Lex Jansen Consulting LLC)
