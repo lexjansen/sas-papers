@@ -3,10 +3,10 @@ import jsonschema as JSD
 
 def validate_json(json_data, schema_file):
     """
-    Validates the resulting ct against a defined json schema, given a schema_file
+    Validates a Dataset-JSON file against a defined json schema, given a schema_file
 
     Arguments:
-        json_data: The resulting CT pacakge to validate
+        json_data: The resulting Dataset-JSON file to validate
         schema_file: Path to a schema file defining ct package schema
     """
     try:
