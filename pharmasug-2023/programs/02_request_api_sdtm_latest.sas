@@ -84,7 +84,7 @@ libname jsontmp "%sysfunc(pathname(work))/jsontmp";
 %create_template(type=sdtm, out=work.sdtm__template);
 
 data _null_;
-  length fref $8 name $64 jsonpath $200 code $400;
+  length fref $8 name name_short $64 jsonpath $200 code $400;
   did = filename(fref,"&project_folder/json/sdtm");
   did = dopen(fref);
   if did ne 0 then do;
@@ -92,9 +92,11 @@ data _null_;
       if index(dread(did,i), "json") then do;
         name=scan(dread(did,i), 1, ".");
         jsonpath=cats("&project_folder/json/sdtm/", name, ".json");
+        name_short = name;
+        if length(name_short) gt 22 then name_short = substr(name, 1, 22);
         code=cats('%nrstr(%read_sdtm_from_json(',
                             'json_path=', jsonpath, ', ',
-                            'out=work.sdtm__', name, ', ', 
+                            'out=work.sdtm__', name_short, ', ', 
                             'jsonlib=jsontmp, ',
                             'template=work.sdtm__template',
                           ');)');
