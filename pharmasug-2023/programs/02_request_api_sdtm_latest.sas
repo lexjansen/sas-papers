@@ -3,7 +3,7 @@
   filename jsonfile "%sysfunc(pathname(work))/dataspecializations_&package..json";
 
   %get_api_response(
-    baseurl=&base_url,
+    baseurl=&base_url_cosmos,
     endpoint=/mdr/specializations/sdtm/packages/&package/datasetspecializations,
     response_fileref=jsonfile
   );
@@ -33,7 +33,7 @@
 
 filename jsonf "&project_folder/json/datasetspecializations_packages.json";
 %get_api_response(
-    baseurl=&base_url,
+    baseurl=&base_url_cosmos,
     endpoint=/mdr/specializations/sdtm/packages,
     response_fileref=jsonf
   );
@@ -70,7 +70,7 @@ run;
 data _null_;
   set work.latest_sdtm;
   length code $4096 response_file $1024;
-  baseurl="&base_url";
+  baseurl="&base_url_cosmos";
   response_file=cats("&project_folder/json/sdtm/", datasetSpecializationId, ".json");
   response_file=lowcase(response_file);
   code=cats('%get_api_response(baseurl=', baseurl, ', endpoint=', href, ', response_file=', response_file, ');');
