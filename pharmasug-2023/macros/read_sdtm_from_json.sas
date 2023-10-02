@@ -39,7 +39,7 @@
       
       %if %sysfunc(exist(&jsonlib.._links_parentbiomedicalconcept)) %then %do;    
         , scan(pbc.href, -1, "\/") as biomedicalConceptId length=64
-        , var.dateElementConceptId as dataElementConceptId length=64 label=""
+        , var.dataElementConceptId as dataElementConceptId length=64 label=""
       %end;
       %if not %sysfunc(exist(&jsonlib.._links_parentbiomedicalconcept)) %then %do;    
         , root.biomedicalConceptId length=64
